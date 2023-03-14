@@ -1,0 +1,26 @@
+#element-2, /* 1st (near banner) call-us button */
+#element-5, /* 1st (near banner) make-an-appointment button */
+#element-12, /* 1st section header */
+#element-13, /* 1st section paragraph */
+#element-200, /* 2nd section header */
+#element-605, /* 2nd section paragraph */
+#element-794, /* 3rd section header */
+#element-795, /* 3rd section paragraph */
+#element-805, /* 5th section (below video) header */
+#element-806, /* 5th section below video paragraph */
+#element-807, /* 6th section below video paragraph */
+#element-808, /* 6th section below video paragraph */
+#element-731, /* 2nd call-us button (after 5th section) */
+#element-730, /* 2nd make-an-appointment button (after 5th section) */
+#element-718, /* 7th section header (sub specialty) */
+#element-798, /* 7th section 1st paragraph (before sub specialty) */
+#element-799, /* 7th section 1st paragraph (after sub specialty) */
+#element-17, /* 8th section 1st header (blue blackground, white text) */
+#element-800, /* 8th section 1st paragraph (blue blackground, white text) */
+#element-777, /* 3rd call-us button (blue blackground, white text) */
+#element-778, /* 3rd make-an-appointment button (blue blackground, white text) */
+#element-21, /* 9th section header (below video) */
+#element-626 /* 9th section paragraph (below video) */
+{
+  direction: rtl;
+}

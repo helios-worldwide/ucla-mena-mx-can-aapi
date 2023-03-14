@@ -1,0 +1,20 @@
+#element-2, /* 1st contact us button near the banner */
+#element-12, /* 1st section paragraph next to 'Best Hospitals logo' */
+#element-13, /* 1st section paragraph next to 'Best Hospitals logo' */
+#element-200, /* 2nd section header text  next to image 'Doctor and patient' */
+#element-605, /* 2nd section paragraph next to image 'Doctor and patient' */
+#element-794, /* 3rd section header text */
+#element-795, /* 3rd section paragraph */
+#element-797, /* 4th section paragraph below a video */
+#element-731, /* 2nd contact us button below a video */
+#element-718, /* 5th section header above the programs slider */
+#element-798, /* 5th section paragraph above the programs slider */
+#element-799, /* 6th section header below the programs slider */
+#element-17, /* 7th section header (blue background, white text) */
+#element-800, /* 7th section paragraph (blue background, white text section) */
+#element-777, /* 3rd contact us button (blue background, white text section) */
+#element-21, /* 8th section header below a video */
+#element-626 /* 8th section paragraph below a video */
+{
+  direction: rtl;
+}
