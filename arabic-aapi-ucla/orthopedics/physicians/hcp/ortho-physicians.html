@@ -1,731 +1,993 @@
 <style>
-.item-absolute {
-  position: absolute;
-}
+  .item-absolute {
+    position: absolute;
+  }
 
-.section-front {
-  z-index: 999;
-}
+  .section-front {
+    z-index: 999;
+  }
 
-.slider-container {
-   position: relative;
-}
+  .slider-container {
+    position: relative;
+  }
 
-.slider.physicians .slide {
-  width:  265px;
-  margin: 0.313rem;
-}
+  .slider.physicians .slide {
+    width: 265px;
+    margin: 0.313rem;
+  }
 
-.card {
-  width: 100%;
-  height: 400px;
-  font-size: 0.9907rem;
-  font-family: "trade-gothic-next", "trade-gothic-next-1", "trade-gothic-next-2", "trade-gothic-next-web", "trade-gothic-next-web-1", "trade-gothic-next-web-2";
-  -webkit-box-shadow: rgb(93 93 93 / 25%) 2px 0 4px 0;
-          box-shadow: rgb(93 93 93 / 25%) 2px 0 4px 0;
-  display: flex;
-  flex-direction: column;
-}
+  .card {
+    width: 100%;
+    height: 400px;
+    font-size: 0.9907rem;
+    font-family: "trade-gothic-next", "trade-gothic-next-1",
+      "trade-gothic-next-2", "trade-gothic-next-web", "trade-gothic-next-web-1",
+      "trade-gothic-next-web-2";
+    -webkit-box-shadow: rgb(93 93 93 / 25%) 2px 0 4px 0;
+    box-shadow: rgb(93 93 93 / 25%) 2px 0 4px 0;
+    display: flex;
+    flex-direction: column;
+  }
 
-.card .layer-1 {
-      width: 265px;
-      height: 265px;
-      flex-basis: 265px;
-}
+  .card .layer-1 {
+    width: 265px;
+    height: 265px;
+    flex-basis: 265px;
+  }
 
-.card .layer-2 {
-      width: 100%;
-      flex: auto;
-      background-color: #FFF;
-      display: flex;
-      flex-direction: column;
-}
+  .card .layer-2 {
+    width: 100%;
+    flex: auto;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+  }
 
-.card .layer-2 .slide-title {
-  font-size: 1rem;
-  font-weight: 700;
-  font-family: "trade-gothic-next", "trade-gothic-next-1", "trade-gothic-next-2", "trade-gothic-next-web", "trade-gothic-next-web-1", "trade-gothic-next-web-2";
-  flex: 1;
-  padding: 0 !important;
-  margin: 0 !important;
-  color: #2774AE;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  .card .layer-2 .slide-title {
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: "trade-gothic-next", "trade-gothic-next-1",
+      "trade-gothic-next-2", "trade-gothic-next-web", "trade-gothic-next-web-1",
+      "trade-gothic-next-web-2";
+    flex: 1;
+    padding: 0 !important;
+    margin: 0 !important;
+    color: #2774ae;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-.card .layer-2 .slide-position {
-  font-size: 13.5px;
-  flex: 1;
-  padding: 0 !important;
-  margin: 0 !important;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+  .card .layer-2 .slide-position {
+    font-size: 13.5px;
+    flex: 1;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-.card .layer-2 .btn-primary {
-  flex-basis: 40px;
-  padding: 0 !important;
-  margin: 0 !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #2774AE;
-  color: #FFFFFF;
-  font-size: 0.8669rem;
-  line-height: 0.8669rem;
-  font-weight: 700;
-  cursor: pointer;
-  border: none;
-  font-family: "trade-gothic-next", "trade-gothic-next-1", "trade-gothic-next-2", "trade-gothic-next-web", "trade-gothic-next-web-1", "trade-gothic-next-web-2";
-}
+  .card .layer-2 .btn-primary {
+    flex-basis: 40px;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2774ae;
+    color: #ffffff;
+    font-size: 0.8669rem;
+    line-height: 0.8669rem;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    font-family: "trade-gothic-next", "trade-gothic-next-1",
+      "trade-gothic-next-2", "trade-gothic-next-web", "trade-gothic-next-web-1",
+      "trade-gothic-next-web-2";
+  }
 
-.slick-dots {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 0;
-  padding: 0.938rem 0;
-  list-style-type: none;
-}
+  .slick-dots {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0.938rem 0;
+    list-style-type: none;
+  }
 
-.slick-dots li {
-  margin: 0 3px;
-}
+  .slick-dots li {
+    margin: 0 3px;
+  }
 
-.slick-dots button {
-  display: block;
-  width: 10px;
-  height: 10px;
-  padding: 0;
-  border: 1px solid #2774AE;
-  border-radius: 100%;
-  background-color: #FFFFFF;
-  text-indent: -9999px;
-}
+  .slick-dots button {
+    display: block;
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border: 1px solid #2774ae;
+    border-radius: 100%;
+    background-color: #ffffff;
+    text-indent: -9999px;
+  }
 
-.slick-dots li.slick-active button {
-  background-color: #2774AE;
-}
+  .slick-dots li.slick-active button {
+    background-color: #2774ae;
+  }
 
-.slider-arrow {
-  width: 1.3125rem;
-  height: 2.1875rem;
-  display: inline-block;
-  background-size: contain;
-}
+  .slider-arrow {
+    width: 1.3125rem;
+    height: 2.1875rem;
+    display: inline-block;
+    background-size: contain;
+  }
 
-.slider-arrow.next {
-  background: url('https://v.fastcdn.co/u/23b46e4b/56445012-0-slider-right-blue.png') no-repeat;
-  background-size: contain;
-  position: absolute;
-  top: 35%;
-  right: -3.125rem;
-}
+  .slider-arrow.next {
+    background: url("https://v.fastcdn.co/u/23b46e4b/56445012-0-slider-right-blue.png")
+      no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 35%;
+    right: -3.125rem;
+  }
 
-.slider-arrow.prev {
-  background: url('https://v.fastcdn.co/u/23b46e4b/56445007-0-slider-left-blue.png') no-repeat;
-  background-size: contain;
-  position: absolute;
-  top: 35%;
-  left: -3.125rem;
-}
+  .slider-arrow.prev {
+    background: url("https://v.fastcdn.co/u/23b46e4b/56445007-0-slider-left-blue.png")
+      no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 35%;
+    left: -3.125rem;
+  }
 
-/* custom modal style */
-.lightbox {
+  /* custom modal style */
+  .lightbox {
     display: none;
     position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-}
+  }
 
-.item-cover {
+  .item-cover {
     z-index: 1000030;
-}
+  }
 
-.lightbox-dim {
-    background: rgba(0,0,0,0.85);
+  .lightbox-dim {
+    background: rgba(0, 0, 0, 0.85);
     height: 100%;
-    animation: fade-in .5s ease-in-out;
+    animation: fade-in 0.5s ease-in-out;
     overflow-x: hidden;
     display: flex;
     align-items: center;
     padding: 30px 0;
-}
+  }
 
-.lightbox-content {
+  .lightbox-content {
     background-color: #fefefe;
     border-radius: 3px;
     position: relative;
     margin: auto;
-    animation: slide-down .5s ease-in-out;
-}
+    animation: slide-down 0.5s ease-in-out;
+  }
 
-.lightbox-content {
-  width: 23.75rem;
-}
+  .lightbox-content {
+    width: 23.75rem;
+  }
 
-.lightbox-close {
+  .lightbox-close {
     width: 26px;
     right: 0;
     top: -10px;
     cursor: pointer;
-}
+  }
 
-.lightbox-close-btn {
+  .lightbox-close-btn {
     padding: 0;
     border: none;
     background: none;
-}
+  }
 
-.lightbox-btn-svg {
+  .lightbox-btn-svg {
     display: block;
-}
+  }
 
-.lightbox-close-icon {
+  .lightbox-close-icon {
     fill: #fff;
-}
+  }
 
-.modal-body {
-  padding: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.modal-footer {
-  padding: 0 2rem 2rem;
-}
-
-.modal-footer > a {
-  text-align: center;
-}
-
-.modal-footer a:first-child {
-  margin-right: 0.5rem;
-  background: #2774AE;
-  color: #FFF;
-}
-
-.modal-footer a:nth-child(2) {
-  margin-left: 0.5rem;
-  background: #FFC72C;
-  color: #003B5C;
-}
-
-.ucla-popup-img-container {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  width: 13.9375rem;
-}
-
-.ucla-popup-img-container img {
-  width: 100%;
-  -webkit-box-shadow: rgb(93 93 93 / 25%) 2px 0 4px 0;
-          box-shadow: rgb(93 93 93 / 25%) 2px 0 4px 0;
-}
-
-.ucla-popup-text-container {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.ucla-popup-title {
-  margin: 0.313rem 0;
-  font-family: "p22-mackinac-pro-1","p22-mackinac-pro-2",serif;
-  font-size: 1.2384rem;
-  color: #2774ae;
-  line-height: 1.75rem;
-  font-weight: 500;
-
-  /* For Arabic page */
-  text-align: right;
-}
-
-.ucla-popup-subtitle {
-  margin-bottom: 1rem;
-  font-size: 0.9907rem;
-  color: #003b5c;
-  line-height: 1.375rem;
-
-  /* For Arabic page */
-  text-align: right;
-}
-
-.ucla-popup-text-container p {
-  line-height: 1.25rem;
-  font-size: 0.8669rem;
-  color: #010101;
-
-  /* For Arabic page */
-  text-align: right;
-}
-
-.ucla-popup .btn {
-  display: block;
-  padding: 1rem;
-  border-radius: 5px;
-  font-size: 0.9907rem;
-  font-weight: 600;
-}
-
-.ucla-popup .btn:nth-child(1) {
-  margin-bottom: 1rem;
-}
-
-.ucla-popup .btn:nth-child(2) {
-  margin-bottom: 1rem;
-}
-
-
-@media screen and (min-width:768px) {
   .modal-body {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    padding: 2.5rem 2.3rem 2.3rem;
-  }
-
-  .lightbox-content {
-    width: 47.375rem;
-  }
-
-  .ucla-popup-img-container {
-    max-width: 100%;
-  }
-
-  .ucla-popup-text-container {
-    -webkit-box-flex: 2;
-        -ms-flex: 2;
-            flex: 2;
-    margin-left: 1.5rem;
-    text-align: left;
-  }
-
-  .ucla-popup-title {
-    margin: 0;
-    font-size: 1.4861rem;
-    line-height: 2.375rem;
-  }
-
-  .ucla-popup-subtitle {
-    line-height: 1.625rem;
-  }
-
-  .ucla-popup-text-container p {
-    line-height: 1.375rem;
-  }
-
-  .modal-footer {
+    padding: 2rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .modal-footer {
+    padding: 0 2rem 2rem;
+  }
+
+  .modal-footer > a {
+    text-align: center;
+  }
+
+  .modal-footer a:first-child {
+    margin-right: 0.5rem;
+    background: #2774ae;
+    color: #fff;
+  }
+
+  .modal-footer a:nth-child(2) {
+    margin-left: 0.5rem;
+    background: #ffc72c;
+    color: #003b5c;
+  }
+
+  .ucla-popup-img-container {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    width: 13.9375rem;
+  }
+
+  .ucla-popup-img-container img {
+    width: 100%;
+    -webkit-box-shadow: rgb(93 93 93 / 25%) 2px 0 4px 0;
+    box-shadow: rgb(93 93 93 / 25%) 2px 0 4px 0;
+  }
+
+  .ucla-popup-text-container {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+
+  .ucla-popup-title {
+    margin: 0.313rem 0;
+    font-family: "p22-mackinac-pro-1", "p22-mackinac-pro-2", serif;
+    font-size: 1.2384rem;
+    color: #2774ae;
+    line-height: 1.75rem;
+    font-weight: 500;
+
+    /* For Arabic page */
+    text-align: right;
+  }
+
+  .ucla-popup-subtitle {
+    margin-bottom: 1rem;
+    font-size: 0.9907rem;
+    color: #003b5c;
+    line-height: 1.375rem;
+
+    /* For Arabic page */
+    text-align: right;
+  }
+
+  .ucla-popup-text-container p {
+    line-height: 1.25rem;
+    font-size: 0.8669rem;
+    color: #010101;
+
+    /* For Arabic page */
+    text-align: right;
   }
 
   .ucla-popup .btn {
-    width: 21rem;
-    display: inline-block;
+    display: block;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 0.9907rem;
+    font-weight: 600;
   }
 
-  /* .ucla-popup .btn:nth-child(1) { */
-  /*   margin-bottom: 0; */
-  /* } */
-}
-
-.ucla-popup-text-container p span,
-.ucla-popup-title span,
-.ucla-popup-subtitle span {
-  display: block;
-}
-
-.slide p span {
-  display: block;
-}
-/* Set the direction for slider item */
-.slider.physicians .card .layer-2 .slide-title,
-.slider.physicians .card .layer-2 .slide-position,
-.slider.physicians .card .layer-2 button {
-  direction: rtl;
-}
-
-/* Set the direction for modal */
-.ucla-popup .modal-body .ucla-popup-text-container .ucla-popup-title,
-.ucla-popup .modal-body .ucla-popup-text-container .ucla-popup-subtitle,
-.ucla-popup .modal-body .ucla-popup-text-container p,
-.ucla-popup .modal-footer a {
-  direction: rtl;
-}
-
-span.whitespace-nowrap {
-  white-space: nowrap;
-  display: initial !important;
-}
-</style>
-<script>
-'use strict';
-function loadScript(url, callback) {
-
-  var script = document.createElement("script")
-  script.type = "text/javascript";
-
-  if (script.readyState) { //IE
-    script.onreadystatechange = function () {
-      if (script.readyState === "loaded" || script.readyState === "complete") {
-        script.onreadystatechange = null;
-        callback();
-      }
-    };
-  } else { //Others
-    script.onload = function () {
-      callback();
-    };
+  .ucla-popup .btn:nth-child(1) {
+    margin-bottom: 1rem;
   }
 
-  script.src = url;
-  document.getElementsByTagName("head")[0].appendChild(script);
-}
-
-(function () {
-  if (typeof jQuery === 'undefined') {
-    loadScript("//code.jquery.com/jquery-3.5.0.min.js", function () {
-
-      //jQuery loaded
-      console.log('jquery loaded');
-      loadScript("//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js", function () {
-        //slick loaded
-        afterJquery();
-
-      });
-
-    });
-  } else {
-    loadScript("//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js", function () {
-      //slick loaded
-      afterJquery();
-
-    });
+  .ucla-popup .btn:nth-child(2) {
+    margin-bottom: 1rem;
   }
 
-  function afterJquery() {
-    $('.slider-container').closest('.section').addClass('section-front');
-    let modalOpenBtns;
-    const modals = document.querySelectorAll('.ucla-popup');
-
-    function initModalBtns() {
-      modalOpenBtns = document.querySelectorAll('.modal-open-btn');
-
-      modalOpenBtns.forEach(btn => {
-        btn.addEventListener('click', e => {
-          let modalId = btn.dataset.modalId;
-          console.log(`MODAL: ${modalId}`);
-          let modal = document.getElementById(modalId);
-          console.log(`MODAL: ${modalId}`);
-          modal.style.display = "block";
-        });
-      });
+  @media screen and (min-width: 768px) {
+    .modal-body {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      padding: 2.5rem 2.3rem 2.3rem;
     }
 
-    modals.forEach(modal => {
-      let closeBtn = modal.getElementsByClassName("lightbox-close-btn")[0];
-      let innerModal = modal.getElementsByClassName("lightbox-dim")[0];
-      closeBtn.addEventListener('click', e => {
-        e.stopPropagation();
-        modal.style.display = "none";
-      });
-      innerModal.addEventListener('click', e => {
-        e.stopPropagation();
-        if (e.target === innerModal) {
-          modal.style.display = "none";
-        }
-      });
-    });
+    .lightbox-content {
+      width: 47.375rem;
+    }
 
-    $('.slider').on('init', function (event, slick) {
-      initModalBtns();
-    });
+    .ucla-popup-img-container {
+      max-width: 100%;
+    }
 
-    $('.slider').slick({
-      dots: true,
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      variableWidth: true,
-      arrows: true,
-      prevArrow: $('.prev'),
-      nextArrow: $('.next')
-    });
+    .ucla-popup-text-container {
+      -webkit-box-flex: 2;
+      -ms-flex: 2;
+      flex: 2;
+      margin-left: 1.5rem;
+      text-align: left;
+    }
+
+    .ucla-popup-title {
+      margin: 0;
+      font-size: 1.4861rem;
+      line-height: 2.375rem;
+    }
+
+    .ucla-popup-subtitle {
+      line-height: 1.625rem;
+    }
+
+    .ucla-popup-text-container p {
+      line-height: 1.375rem;
+    }
+
+    .modal-footer {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+    }
+
+    .ucla-popup .btn {
+      width: 21rem;
+      display: inline-block;
+    }
+
+    /* .ucla-popup .btn:nth-child(1) { */
+    /*   margin-bottom: 0; */
+    /* } */
   }
-})();
+
+  .ucla-popup-text-container p span,
+  .ucla-popup-title span,
+  .ucla-popup-subtitle span {
+    display: block;
+  }
+
+  .slide p span {
+    display: block;
+  }
+  /* Set the direction for slider item */
+  .slider.physicians .card .layer-2 .slide-title,
+  .slider.physicians .card .layer-2 .slide-position,
+  .slider.physicians .card .layer-2 button {
+    direction: rtl;
+  }
+
+  /* Set the direction for modal */
+  .ucla-popup .modal-body .ucla-popup-text-container .ucla-popup-title,
+  .ucla-popup .modal-body .ucla-popup-text-container .ucla-popup-subtitle,
+  .ucla-popup .modal-body .ucla-popup-text-container p,
+  .ucla-popup .modal-footer a {
+    direction: rtl;
+  }
+
+  span.whitespace-nowrap {
+    white-space: nowrap;
+    display: initial !important;
+  }
+</style>
+<script>
+  "use strict";
+  function loadScript(url, callback) {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+
+    if (script.readyState) {
+      //IE
+      script.onreadystatechange = function () {
+        if (
+          script.readyState === "loaded" ||
+          script.readyState === "complete"
+        ) {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else {
+      //Others
+      script.onload = function () {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  }
+
+  (function () {
+    if (typeof jQuery === "undefined") {
+      loadScript("//code.jquery.com/jquery-3.5.0.min.js", function () {
+        //jQuery loaded
+        console.log("jquery loaded");
+        loadScript(
+          "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js",
+          function () {
+            //slick loaded
+            afterJquery();
+          }
+        );
+      });
+    } else {
+      loadScript(
+        "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js",
+        function () {
+          //slick loaded
+          afterJquery();
+        }
+      );
+    }
+
+    function afterJquery() {
+      $(".slider-container").closest(".section").addClass("section-front");
+      let modalOpenBtns;
+      const modals = document.querySelectorAll(".ucla-popup");
+
+      function initModalBtns() {
+        modalOpenBtns = document.querySelectorAll(".modal-open-btn");
+
+        modalOpenBtns.forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            let modalId = btn.dataset.modalId;
+            console.log(`MODAL: ${modalId}`);
+            let modal = document.getElementById(modalId);
+            console.log(`MODAL: ${modalId}`);
+            modal.style.display = "block";
+          });
+        });
+      }
+
+      modals.forEach((modal) => {
+        let closeBtn = modal.getElementsByClassName("lightbox-close-btn")[0];
+        let innerModal = modal.getElementsByClassName("lightbox-dim")[0];
+        closeBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          modal.style.display = "none";
+        });
+        innerModal.addEventListener("click", (e) => {
+          e.stopPropagation();
+          if (e.target === innerModal) {
+            modal.style.display = "none";
+          }
+        });
+      });
+
+      $(".slider").on("init", function (event, slick) {
+        initModalBtns();
+      });
+
+      $(".slider").slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        variableWidth: true,
+        arrows: true,
+        prevArrow: $(".prev"),
+        nextArrow: $(".next"),
+      });
+    }
+  })();
 </script>
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<link
+  rel="stylesheet"
+  href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+/>
 <div class="slider-container">
   <div class="slider physicians">
-
     <div class="slide">
-      <div class="card layer-0" style="background-image: url(https://v.fastcdn.co/u/23b46e4b/63517032-0-Nicholas-M.-Bernthal.jpeg); background-size: contain; background-position: center 0px;">
+      <div
+        class="card layer-0"
+        style="
+          background-image: url(https://v.fastcdn.co/u/23b46e4b/63517032-0-Nicholas-M.-Bernthal.jpeg);
+          background-size: contain;
+          background-position: center 0px;
+        "
+      >
         <div class="layer-1"></div>
         <div class="layer-2">
           <p class="slide-title">Nicholas M. Bernthal, MD</p>
           <p class="slide-position">الأورام العظمية - جراحة العظام</p>
-          <button type="button" class="btn-primary modal-open-btn" data-modal-id="modal-bernthal">
+          <button
+            type="button"
+            class="btn-primary modal-open-btn"
+            data-modal-id="modal-bernthal"
+          >
             Learn More
           </button>
-        </div> <!-- end .layer-2 -->
-      </div> <!-- end .card-->
-    </div> <!-- end .slide -->
-
+        </div>
+        <!-- end .layer-2 -->
+      </div>
+      <!-- end .card-->
+    </div>
+    <!-- end .slide -->
 
     <div class="slide">
-      <div class="card layer-0" style="background-image: url(https://v.fastcdn.co/u/23b46e4b/63612016-0-Alexander-B.-Christ-.jpg); background-size: contain; background-position: center 0px;">
+      <div
+        class="card layer-0"
+        style="
+          background-image: url(https://v.fastcdn.co/u/23b46e4b/63612016-0-Alexander-B.-Christ-.jpg);
+          background-size: contain;
+          background-position: center 0px;
+        "
+      >
         <div class="layer-1"></div>
         <div class="layer-2">
           <p class="slide-title">Alexander B. Christ, MD</p>
           <p class="slide-position">الأورام العظمية - جراحة العظام</p>
-          <button type="button" class="btn-primary modal-open-btn" data-modal-id="modal-christ">
+          <button
+            type="button"
+            class="btn-primary modal-open-btn"
+            data-modal-id="modal-christ"
+          >
             Learn More
           </button>
-        </div> <!-- end .layer-2 -->
-      </div> <!-- end .card-->
-    </div> <!-- end .slide -->
+        </div>
+        <!-- end .layer-2 -->
+      </div>
+      <!-- end .card-->
+    </div>
+    <!-- end .slide -->
 
     <div class="slide">
-      <div class="card layer-0" style="background-image: url(https://v.fastcdn.co/u/23b46e4b/63517048-0-Edward-J.-McPherson-.jpeg); background-size: contain; background-position: center 0px;">
+      <div
+        class="card layer-0"
+        style="
+          background-image: url(https://v.fastcdn.co/u/23b46e4b/63517048-0-Edward-J.-McPherson-.jpeg);
+          background-size: contain;
+          background-position: center 0px;
+        "
+      >
         <div class="layer-1"></div>
         <div class="layer-2">
           <p class="slide-title">Edward J. McPherson, MD</p>
-          <p class="slide-position">جراحة استبدال المفاصل والحفاظ عليها - جراحة عظام الورك والركبة</p>
-          <button type="button" class="btn-primary modal-open-btn" data-modal-id="modal-mcpherson">
+          <p class="slide-position">
+            جراحة استبدال المفاصل والحفاظ عليها - جراحة عظام الورك والركبة
+          </p>
+          <button
+            type="button"
+            class="btn-primary modal-open-btn"
+            data-modal-id="modal-mcpherson"
+          >
             Learn More
           </button>
-        </div> <!-- end .layer-2 -->
-      </div> <!-- end .card-->
-    </div> <!-- end .slide -->
+        </div>
+        <!-- end .layer-2 -->
+      </div>
+      <!-- end .card-->
+    </div>
+    <!-- end .slide -->
 
     <div class="slide">
-      <div class="card layer-0" style="background-image: url(https://v.fastcdn.co/u/23b46e4b/63517052-0-Alexandra-I.-Stavrak.jpeg); background-size: contain; background-position: center 0px;">
+      <div
+        class="card layer-0"
+        style="
+          background-image: url(https://v.fastcdn.co/u/23b46e4b/63517052-0-Alexandra-I.-Stavrak.jpeg);
+          background-size: contain;
+          background-position: center 0px;
+        "
+      >
         <div class="layer-1"></div>
         <div class="layer-2">
           <p class="slide-title">Alexandra I. Stavrakis, MD</p>
-          <p class="slide-position">جراحة استبدال المفاصل والحفاظ عليها - جراحة عظام الورك والركبة</p>
-          <button type="button" class="btn-primary modal-open-btn" data-modal-id="modal-stavrakis">
+          <p class="slide-position">
+            جراحة استبدال المفاصل والحفاظ عليها - جراحة عظام الورك والركبة
+          </p>
+          <button
+            type="button"
+            class="btn-primary modal-open-btn"
+            data-modal-id="modal-stavrakis"
+          >
             Learn More
           </button>
-        </div> <!-- end .layer-2 -->
-      </div> <!-- end .card-->
-    </div> <!-- end .slide -->
+        </div>
+        <!-- end .layer-2 -->
+      </div>
+      <!-- end .card-->
+    </div>
+    <!-- end .slide -->
 
     <div class="slide">
-      <div class="card layer-0" style="background-image: url(https://v.fastcdn.co/u/23b46e4b/63517056-0-Adam-A.-Sassoon-MD-M.jpeg); background-size: contain; background-position: center 0px;">
+      <div
+        class="card layer-0"
+        style="
+          background-image: url(https://v.fastcdn.co/u/23b46e4b/63517056-0-Adam-A.-Sassoon-MD-M.jpeg);
+          background-size: contain;
+          background-position: center 0px;
+        "
+      >
         <div class="layer-1"></div>
         <div class="layer-2">
           <p class="slide-title">Adam A. Sassoon, MD, MS</p>
-          <p class="slide-position">جراحة استبدال المفاصل والحفاظ عليها - جراحة عظام الورك والركبة</p>
-          <button type="button" class="btn-primary modal-open-btn" data-modal-id="modal-sassoon">
+          <p class="slide-position">
+            جراحة استبدال المفاصل والحفاظ عليها - جراحة عظام الورك والركبة
+          </p>
+          <button
+            type="button"
+            class="btn-primary modal-open-btn"
+            data-modal-id="modal-sassoon"
+          >
             Learn More
           </button>
-        </div> <!-- end .layer-2 -->
-      </div> <!-- end .card-->
-    </div> <!-- end .slide -->
+        </div>
+        <!-- end .layer-2 -->
+      </div>
+      <!-- end .card-->
+    </div>
+    <!-- end .slide -->
 
     <div class="slide">
-      <div class="card layer-0" style="background-image: url(https://v.fastcdn.co/u/23b46e4b/63517051-0-Erik-N.-Zeegen-MD--2.jpeg); background-size: contain; background-position: center 0px;">
+      <div
+        class="card layer-0"
+        style="
+          background-image: url(https://v.fastcdn.co/u/23b46e4b/63517051-0-Erik-N.-Zeegen-MD--2.jpeg);
+          background-size: contain;
+          background-position: center 0px;
+        "
+      >
         <div class="layer-1"></div>
         <div class="layer-2">
           <p class="slide-title">Erik N. Zeegen, MD</p>
-          <p class="slide-position">جراحة استبدال المفاصل والحفاظ عليها - جراحة عظام الورك والركبة</p>
-          <button type="button" class="btn-primary modal-open-btn" data-modal-id="modal-zeegen">
+          <p class="slide-position">
+            جراحة استبدال المفاصل والحفاظ عليها - جراحة عظام الورك والركبة
+          </p>
+          <button
+            type="button"
+            class="btn-primary modal-open-btn"
+            data-modal-id="modal-zeegen"
+          >
             Learn More
           </button>
-        </div> <!-- end .layer-2 -->
-      </div> <!-- end .card-->
-    </div> <!-- end .slide -->
+        </div>
+        <!-- end .layer-2 -->
+      </div>
+      <!-- end .card-->
+    </div>
+    <!-- end .slide -->
 
     <div class="slide">
-      <div class="card layer-0" style="background-image: url(https://v.fastcdn.co/u/23b46e4b/63611996-0--Elizabeth-L.-Lord-2.jpg); background-size: contain; background-position: center 0px;">
+      <div
+        class="card layer-0"
+        style="
+          background-image: url(https://v.fastcdn.co/u/23b46e4b/63611996-0--Elizabeth-L.-Lord-2.jpg);
+          background-size: contain;
+          background-position: center 0px;
+        "
+      >
         <div class="layer-1"></div>
         <div class="layer-2">
           <p class="slide-title">Elizabeth L. Lord, MD</p>
-          <p class="slide-position">اضطرابات العمود الفقري - جراحة العمود الفقري</p>
-          <button type="button" class="btn-primary modal-open-btn" data-modal-id="modal-lord">
+          <p class="slide-position">
+            اضطرابات العمود الفقري - جراحة العمود الفقري
+          </p>
+          <button
+            type="button"
+            class="btn-primary modal-open-btn"
+            data-modal-id="modal-lord"
+          >
             Learn More
           </button>
-        </div> <!-- end .layer-2 -->
-      </div> <!-- end .card-->
-    </div> <!-- end .slide -->
+        </div>
+        <!-- end .layer-2 -->
+      </div>
+      <!-- end .card-->
+    </div>
+    <!-- end .slide -->
 
     <div class="slide">
-      <div class="card layer-0" style="background-image: url(https://v.fastcdn.co/u/23b46e4b/63612005-0-Arya-N.-Shamie-240x3.jpg); background-size: contain; background-position: center 0px;">
+      <div
+        class="card layer-0"
+        style="
+          background-image: url(https://v.fastcdn.co/u/23b46e4b/63612005-0-Arya-N.-Shamie-240x3.jpg);
+          background-size: contain;
+          background-position: center 0px;
+        "
+      >
         <div class="layer-1"></div>
         <div class="layer-2">
           <p class="slide-title">Arya N. Shamie, MD</p>
-          <p class="slide-position">اضطرابات العمود الفقري - جراحة العمود الفقري</p>
-          <button type="button" class="btn-primary modal-open-btn" data-modal-id="modal-shamie">
+          <p class="slide-position">
+            اضطرابات العمود الفقري - جراحة العمود الفقري
+          </p>
+          <button
+            type="button"
+            class="btn-primary modal-open-btn"
+            data-modal-id="modal-shamie"
+          >
             Learn More
           </button>
-        </div> <!-- end .layer-2 -->
-      </div> <!-- end .card-->
-    </div> <!-- end .slide -->
+        </div>
+        <!-- end .layer-2 -->
+      </div>
+      <!-- end .card-->
+    </div>
+    <!-- end .slide -->
 
     <div class="slide">
-      <div class="card layer-0" style="background-image: url(https://v.fastcdn.co/u/23b46e4b/63612001-0-Don-Young-Park-240x3.jpg); background-size: contain; background-position: center 0px;">
+      <div
+        class="card layer-0"
+        style="
+          background-image: url(https://v.fastcdn.co/u/23b46e4b/63612001-0-Don-Young-Park-240x3.jpg);
+          background-size: contain;
+          background-position: center 0px;
+        "
+      >
         <div class="layer-1"></div>
         <div class="layer-2">
           <p class="slide-title">Don Young Park, MD</p>
-          <p class="slide-position">اضطرابات العمود الفقري - جراحة العمود الفقري</p>
-          <button type="button" class="btn-primary modal-open-btn" data-modal-id="modal-park">
+          <p class="slide-position">
+            اضطرابات العمود الفقري - جراحة العمود الفقري
+          </p>
+          <button
+            type="button"
+            class="btn-primary modal-open-btn"
+            data-modal-id="modal-park"
+          >
             Learn More
           </button>
-        </div> <!-- end .layer-2 -->
-      </div> <!-- end .card-->
-    </div> <!-- end .slide -->
+        </div>
+        <!-- end .layer-2 -->
+      </div>
+      <!-- end .card-->
+    </div>
+    <!-- end .slide -->
 
     <div class="slide">
-      <div class="card layer-0" style="background-image: url(https://v.fastcdn.co/u/23b46e4b/63517093-0-Kodi-K.-Azari-MD--24.jpeg); background-size: contain; background-position: center 0px;">
+      <div
+        class="card layer-0"
+        style="
+          background-image: url(https://v.fastcdn.co/u/23b46e4b/63517093-0-Kodi-K.-Azari-MD--24.jpeg);
+          background-size: contain;
+          background-position: center 0px;
+        "
+      >
         <div class="layer-1"></div>
         <div class="layer-2">
           <p class="slide-title">Kodi K. Azari, MD</p>
           <p class="slide-position">تشوه اليد المعقد - جراحة اليد</p>
-          <button type="button" class="btn-primary modal-open-btn" data-modal-id="modal-azari">
+          <button
+            type="button"
+            class="btn-primary modal-open-btn"
+            data-modal-id="modal-azari"
+          >
             Learn More
           </button>
-        </div> <!-- end .layer-2 -->
-      </div> <!-- end .card-->
-    </div> <!-- end .slide -->
+        </div>
+        <!-- end .layer-2 -->
+      </div>
+      <!-- end .card-->
+    </div>
+    <!-- end .slide -->
 
     <div class="slide">
-      <div class="card layer-0" style="background-image: url(https://v.fastcdn.co/u/23b46e4b/63517104-0-Neil-F.-Jones-MD--24.jpeg); background-size: contain; background-position: center 0px;">
+      <div
+        class="card layer-0"
+        style="
+          background-image: url(https://v.fastcdn.co/u/23b46e4b/63517104-0-Neil-F.-Jones-MD--24.jpeg);
+          background-size: contain;
+          background-position: center 0px;
+        "
+      >
         <div class="layer-1"></div>
         <div class="layer-2">
           <p class="slide-title">Neil F. Jones, MD</p>
           <p class="slide-position">تشوه اليد المعقد - جراحة اليد</p>
-          <button type="button" class="btn-primary modal-open-btn" data-modal-id="modal-jones">
+          <button
+            type="button"
+            class="btn-primary modal-open-btn"
+            data-modal-id="modal-jones"
+          >
             Learn More
           </button>
-        </div> <!-- end .layer-2 -->
-      </div> <!-- end .card-->
-    </div> <!-- end .slide -->
+        </div>
+        <!-- end .layer-2 -->
+      </div>
+      <!-- end .card-->
+    </div>
+    <!-- end .slide -->
 
     <div class="slide">
-      <div class="card layer-0" style="background-image: url(https://v.fastcdn.co/u/23b46e4b/63517106-0-Prosper-Benhaim-MD--.jpeg); background-size: contain; background-position: center 0px;">
+      <div
+        class="card layer-0"
+        style="
+          background-image: url(https://v.fastcdn.co/u/23b46e4b/63517106-0-Prosper-Benhaim-MD--.jpeg);
+          background-size: contain;
+          background-position: center 0px;
+        "
+      >
         <div class="layer-1"></div>
         <div class="layer-2">
           <p class="slide-title">Prosper Benhaim, MD</p>
           <p class="slide-position">تشوه اليد المعقد - جراحة اليد</p>
-          <button type="button" class="btn-primary modal-open-btn" data-modal-id="modal-benhaim">
+          <button
+            type="button"
+            class="btn-primary modal-open-btn"
+            data-modal-id="modal-benhaim"
+          >
             Learn More
           </button>
-        </div> <!-- end .layer-2 -->
-      </div> <!-- end .card-->
-    </div> <!-- end .slide -->
+        </div>
+        <!-- end .layer-2 -->
+      </div>
+      <!-- end .card-->
+    </div>
+    <!-- end .slide -->
 
     <div class="slide">
-      <div class="card layer-0" style="background-image: url(https://v.fastcdn.co/u/23b46e4b/63517096-0-Lauren-E.-Wessel-MD-.jpeg); background-size: contain; background-position: center 0px;">
+      <div
+        class="card layer-0"
+        style="
+          background-image: url(https://v.fastcdn.co/u/23b46e4b/63517096-0-Lauren-E.-Wessel-MD-.jpeg);
+          background-size: contain;
+          background-position: center 0px;
+        "
+      >
         <div class="layer-1"></div>
         <div class="layer-2">
           <p class="slide-title">Lauren E. Wessel, MD</p>
           <p class="slide-position">تشوه اليد المعقد - جراحة اليد</p>
-          <button type="button" class="btn-primary modal-open-btn" data-modal-id="modal-wessel">
+          <button
+            type="button"
+            class="btn-primary modal-open-btn"
+            data-modal-id="modal-wessel"
+          >
             Learn More
           </button>
-        </div> <!-- end .layer-2 -->
-      </div> <!-- end .card-->
-    </div> <!-- end .slide -->
+        </div>
+        <!-- end .layer-2 -->
+      </div>
+      <!-- end .card-->
+    </div>
+    <!-- end .slide -->
 
     <div class="slide">
-      <div class="card layer-0" style="background-image: url(https://v.fastcdn.co/u/23b46e4b/63611929-0-Roy-A.-Meals-MD-240x.jpg); background-size: contain; background-position: center 0px;">
+      <div
+        class="card layer-0"
+        style="
+          background-image: url(https://v.fastcdn.co/u/23b46e4b/63611929-0-Roy-A.-Meals-MD-240x.jpg);
+          background-size: contain;
+          background-position: center 0px;
+        "
+      >
         <div class="layer-1"></div>
         <div class="layer-2">
           <p class="slide-title">Roy A. Meals, MD</p>
           <p class="slide-position">تشوه اليد المعقد - جراحة اليد</p>
-          <button type="button" class="btn-primary modal-open-btn" data-modal-id="modal-meals">
+          <button
+            type="button"
+            class="btn-primary modal-open-btn"
+            data-modal-id="modal-meals"
+          >
             Learn More
           </button>
-        </div> <!-- end .layer-2 -->
-      </div> <!-- end .card-->
-    </div> <!-- end .slide -->
+        </div>
+        <!-- end .layer-2 -->
+      </div>
+      <!-- end .card-->
+    </div>
+    <!-- end .slide -->
 
     <div class="slide">
-      <div class="card layer-0" style="background-image: url(https://v.fastcdn.co/u/23b46e4b/63611927-0-John-F.-Lawrence-MD-.jpg); background-size: contain; background-position: center 0px;">
+      <div
+        class="card layer-0"
+        style="
+          background-image: url(https://v.fastcdn.co/u/23b46e4b/63611927-0-John-F.-Lawrence-MD-.jpg);
+          background-size: contain;
+          background-position: center 0px;
+        "
+      >
         <div class="layer-1"></div>
         <div class="layer-2">
           <p class="slide-title">John F. Lawrence, MD</p>
           <p class="slide-position">تشوه اليد المعقد - جراحة اليد</p>
-          <button type="button" class="btn-primary modal-open-btn" data-modal-id="modal-lawrence">
+          <button
+            type="button"
+            class="btn-primary modal-open-btn"
+            data-modal-id="modal-lawrence"
+          >
             Learn More
           </button>
-        </div> <!-- end .layer-2 -->
-      </div> <!-- end .card-->
-    </div> <!-- end .slide -->
-
-  </div> <!-- end .slider -->
+        </div>
+        <!-- end .layer-2 -->
+      </div>
+      <!-- end .card-->
+    </div>
+    <!-- end .slide -->
+  </div>
+  <!-- end .slider -->
 
   <div class="slider-controls">
     <a class="slider-arrow prev"></a>
     <a class="slider-arrow next"></a>
-  </div> <!-- end .slider-controls -->
-</div> <!-- end .slider-container -->
+  </div>
+  <!-- end .slider-controls -->
+</div>
+<!-- end .slider-container -->
 
 <!-- Modals -->
 
 <div id="modal-bernthal" class="ucla-popup lightbox item-cover">
   <div class="lightbox-dim">
     <div class="lightbox-content">
-      <button class="lightbox-close lightbox-close-btn item-cover item-absolute" aria-label="Close dialog">
-        <svg xmlns="http://www.w3.org/2000/svg" height="26" width="26" class="lightbox-btn-svg">
+      <button
+        class="lightbox-close lightbox-close-btn item-cover item-absolute"
+        aria-label="Close dialog"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="26"
+          width="26"
+          class="lightbox-btn-svg"
+        >
           <circle class="lightbox-close-icon" cx="13" cy="13" r="13"></circle>
           <circle cx="13" cy="13" r="11"></circle>
-          <path class="lightbox-close-icon"
-            d="M17.764 16.62l-1.144 1.144c-.158.157-.348.236-.573.236-.224 0-.415-.08-.572-.236L13 15.29l-2.475 2.474c-.157.157-.348.236-.572.236-.225 0-.415-.08-.573-.236L8.236 16.62C8.08 16.462 8 16.272 8 16.047c0-.224.08-.415.236-.572L10.71 13l-2.474-2.475C8.08 10.368 8 10.177 8 9.953c0-.225.08-.415.236-.573L9.38 8.236C9.538 8.08 9.728 8 9.953 8c.224 0 .415.08.572.236L13 10.71l2.475-2.474c.157-.157.348-.236.572-.236.225 0 .415.08.573.236l1.144 1.144c.157.158.236.348.236.573 0 .224-.08.415-.236.572L15.29 13l2.474 2.475c.157.157.236.348.236.572 0 .225-.08.415-.236.573z">
-          </path>
+          <path
+            class="lightbox-close-icon"
+            d="M17.764 16.62l-1.144 1.144c-.158.157-.348.236-.573.236-.224 0-.415-.08-.572-.236L13 15.29l-2.475 2.474c-.157.157-.348.236-.572.236-.225 0-.415-.08-.573-.236L8.236 16.62C8.08 16.462 8 16.272 8 16.047c0-.224.08-.415.236-.572L10.71 13l-2.474-2.475C8.08 10.368 8 10.177 8 9.953c0-.225.08-.415.236-.573L9.38 8.236C9.538 8.08 9.728 8 9.953 8c.224 0 .415.08.572.236L13 10.71l2.475-2.474c.157-.157.348-.236.572-.236.225 0 .415.08.573.236l1.144 1.144c.157.158.236.348.236.573 0 .224-.08.415-.236.572L15.29 13l2.474 2.475c.157.157.236.348.236.572 0 .225-.08.415-.236.573z"
+          ></path>
         </svg>
       </button>
       <div class="modal-body">
         <div class="ucla-popup-img-container">
-          <img src="https://v.fastcdn.co/u/23b46e4b/63517032-0-Nicholas-M.-Bernthal.jpeg" alt="Nicholas M. Bernthal, MD">
+          <img
+            src="https://v.fastcdn.co/u/23b46e4b/63517032-0-Nicholas-M.-Bernthal.jpeg"
+            alt="Nicholas M. Bernthal, MD"
+          />
         </div>
         <div class="ucla-popup-text-container">
           <h1 class="ucla-popup-title">Nicholas M. Bernthal, MD</h1>
-          <h2 class="ucla-popup-subtitle">
-            الأورام العظمية - جراحة العظام
-          </h2>
+          <h2 class="ucla-popup-subtitle">الأورام العظمية - جراحة العظام</h2>
           <p>
-            الدكتور نيكولاس بيرثال هو الرئيس المؤقت والمدير الطبي التنفيذي في كلية ديفيد جيفن للطب بجامعة كاليفورنيا في لوس أنجلوس. تخرج بامتياز مع مرتبة الشرف و phi beta kappa من جامعة برينستون وحصل على مرتبة الشرف ألفا أوميغا ألفا من كلية الطب بجامعة كورنيل. لقد أتم إقامته في جامعة كاليفورنيا في لوس أنجلوس في جراحة العظام وأجرى زمالات في أبحاث العظام والأورام العضلية الهيكلية في جامعة كاليفورنيا بلوس أنجلوس ومعهد هانتسمان للسرطان على التوالي. اهتماماته السريرية هي أورام العظام والأنسجة الرخوة ، ومختبره الممول من المعاهد الوطنية للصحة هو الرائد في طلاء الزرع الجديد لمنع الالتهابات الجراحية. يعيش في مار فيستا ، كاليفورنيا مع زوجته وأطفالهما الثلاثة وكلابهم.
+            الدكتور نيكولاس بيرثال هو الرئيس المؤقت والمدير الطبي التنفيذي في
+            كلية ديفيد جيفن للطب بجامعة كاليفورنيا في لوس أنجلوس. تخرج بامتياز
+            مع مرتبة الشرف و phi beta kappa من جامعة برينستون وحصل على مرتبة
+            الشرف ألفا أوميغا ألفا من كلية الطب بجامعة كورنيل. لقد أتم إقامته في
+            جامعة كاليفورنيا في لوس أنجلوس في جراحة العظام وأجرى زمالات في أبحاث
+            العظام والأورام العضلية الهيكلية في جامعة كاليفورنيا بلوس أنجلوس
+            ومعهد هانتسمان للسرطان على التوالي. اهتماماته السريرية هي أورام
+            العظام والأنسجة الرخوة ، ومختبره الممول من المعاهد الوطنية للصحة هو
+            الرائد في طلاء الزرع الجديد لمنع الالتهابات الجراحية. يعيش في مار
+            فيستا ، كاليفورنيا مع زوجته وأطفالهما الثلاثة وكلابهم.
           </p>
         </div>
       </div>
       <div class="modal-footer">
         <a
           href="tel:3102133337"
-          class="url-link btn btn-shadow item-block" target="_blank"
+          class="url-link btn btn-shadow item-block"
+          target="_blank"
         >
           اتصل بنا 3337-213 (310)
         </a>
         <a
-          href="https://uclahs.az1.qualtrics.com/jfe/form/SV_d13P9YvXEn8MPEq?Q_Language=AR&utm_source=facebook_paid&utm_medium=paid_social&utm_campaign=orthopedic_mena_patient"
-          class="url-link btn btn-shadow item-block" target="_blank">
+          href="https://uclahs.az1.qualtrics.com/jfe/form/SV_cwCJpClWLtZTMGi?Q_Language=AR&utm_source=linkedin_paid&utm_medium=display&utm_campaign=orthopedic_mena_hcp"
+          class="url-link btn btn-shadow item-block"
+          target="_blank"
+        >
           حدد موعدًا
         </a>
       </div>
@@ -736,39 +998,55 @@ function loadScript(url, callback) {
 <div id="modal-christ" class="ucla-popup lightbox item-cover">
   <div class="lightbox-dim">
     <div class="lightbox-content">
-      <button class="lightbox-close lightbox-close-btn item-cover item-absolute" aria-label="Close dialog">
-        <svg xmlns="http://www.w3.org/2000/svg" height="26" width="26" class="lightbox-btn-svg">
+      <button
+        class="lightbox-close lightbox-close-btn item-cover item-absolute"
+        aria-label="Close dialog"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="26"
+          width="26"
+          class="lightbox-btn-svg"
+        >
           <circle class="lightbox-close-icon" cx="13" cy="13" r="13"></circle>
           <circle cx="13" cy="13" r="11"></circle>
-          <path class="lightbox-close-icon"
-            d="M17.764 16.62l-1.144 1.144c-.158.157-.348.236-.573.236-.224 0-.415-.08-.572-.236L13 15.29l-2.475 2.474c-.157.157-.348.236-.572.236-.225 0-.415-.08-.573-.236L8.236 16.62C8.08 16.462 8 16.272 8 16.047c0-.224.08-.415.236-.572L10.71 13l-2.474-2.475C8.08 10.368 8 10.177 8 9.953c0-.225.08-.415.236-.573L9.38 8.236C9.538 8.08 9.728 8 9.953 8c.224 0 .415.08.572.236L13 10.71l2.475-2.474c.157-.157.348-.236.572-.236.225 0 .415.08.573.236l1.144 1.144c.157.158.236.348.236.573 0 .224-.08.415-.236.572L15.29 13l2.474 2.475c.157.157.236.348.236.572 0 .225-.08.415-.236.573z">
-          </path>
+          <path
+            class="lightbox-close-icon"
+            d="M17.764 16.62l-1.144 1.144c-.158.157-.348.236-.573.236-.224 0-.415-.08-.572-.236L13 15.29l-2.475 2.474c-.157.157-.348.236-.572.236-.225 0-.415-.08-.573-.236L8.236 16.62C8.08 16.462 8 16.272 8 16.047c0-.224.08-.415.236-.572L10.71 13l-2.474-2.475C8.08 10.368 8 10.177 8 9.953c0-.225.08-.415.236-.573L9.38 8.236C9.538 8.08 9.728 8 9.953 8c.224 0 .415.08.572.236L13 10.71l2.475-2.474c.157-.157.348-.236.572-.236.225 0 .415.08.573.236l1.144 1.144c.157.158.236.348.236.573 0 .224-.08.415-.236.572L15.29 13l2.474 2.475c.157.157.236.348.236.572 0 .225-.08.415-.236.573z"
+          ></path>
         </svg>
       </button>
       <div class="modal-body">
         <div class="ucla-popup-img-container">
-          <img src="https://v.fastcdn.co/u/23b46e4b/63612016-0-Alexander-B.-Christ-.jpg" alt="Nicholas M. Bernthal, MD">
+          <img
+            src="https://v.fastcdn.co/u/23b46e4b/63612016-0-Alexander-B.-Christ-.jpg"
+            alt="Nicholas M. Bernthal, MD"
+          />
         </div>
         <div class="ucla-popup-text-container">
           <h1 class="ucla-popup-title">Alexander B. Christ, MD</h1>
-          <h2 class="ucla-popup-subtitle">
-            الأورام العظمية - جراحة العظام
-          </h2>
+          <h2 class="ucla-popup-subtitle">الأورام العظمية - جراحة العظام</h2>
           <p>
-            ألكسندر بي كريست ، دكتور في الطب هو أخصائي أورام عظام متخصص في علاج كل من الأورام الحميدة والخبيثة والحالات ذات الصلة بالجهاز العضلي الهيكلي. لديه اهتمام خاص بتقنيات إنقاذ الأطراف والتقنيات الترميمية بعد علاج أورام العظام.
+            ألكسندر بي كريست ، دكتور في الطب هو أخصائي أورام عظام متخصص في علاج
+            كل من الأورام الحميدة والخبيثة والحالات ذات الصلة بالجهاز العضلي
+            الهيكلي. لديه اهتمام خاص بتقنيات إنقاذ الأطراف والتقنيات الترميمية
+            بعد علاج أورام العظام.
           </p>
         </div>
       </div>
       <div class="modal-footer">
         <a
           href="tel:3102133337"
-          class="url-link btn btn-shadow item-block" target="_blank"
+          class="url-link btn btn-shadow item-block"
+          target="_blank"
         >
           اتصل بنا 3337-213 (310)
         </a>
         <a
-          href="https://uclahs.az1.qualtrics.com/jfe/form/SV_d13P9YvXEn8MPEq?Q_Language=AR&utm_source=facebook_paid&utm_medium=paid_social&utm_campaign=orthopedic_mena_patient"
-          class="url-link btn btn-shadow item-block" target="_blank">
+          href="https://uclahs.az1.qualtrics.com/jfe/form/SV_cwCJpClWLtZTMGi?Q_Language=AR&utm_source=linkedin_paid&utm_medium=display&utm_campaign=orthopedic_mena_hcp"
+          class="url-link btn btn-shadow item-block"
+          target="_blank"
+        >
           حدد موعدًا
         </a>
       </div>
@@ -779,18 +1057,30 @@ function loadScript(url, callback) {
 <div id="modal-mcpherson" class="ucla-popup lightbox item-cover">
   <div class="lightbox-dim">
     <div class="lightbox-content">
-      <button class="lightbox-close lightbox-close-btn item-cover item-absolute" aria-label="Close dialog">
-        <svg xmlns="http://www.w3.org/2000/svg" height="26" width="26" class="lightbox-btn-svg">
+      <button
+        class="lightbox-close lightbox-close-btn item-cover item-absolute"
+        aria-label="Close dialog"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="26"
+          width="26"
+          class="lightbox-btn-svg"
+        >
           <circle class="lightbox-close-icon" cx="13" cy="13" r="13"></circle>
           <circle cx="13" cy="13" r="11"></circle>
-          <path class="lightbox-close-icon"
-            d="M17.764 16.62l-1.144 1.144c-.158.157-.348.236-.573.236-.224 0-.415-.08-.572-.236L13 15.29l-2.475 2.474c-.157.157-.348.236-.572.236-.225 0-.415-.08-.573-.236L8.236 16.62C8.08 16.462 8 16.272 8 16.047c0-.224.08-.415.236-.572L10.71 13l-2.474-2.475C8.08 10.368 8 10.177 8 9.953c0-.225.08-.415.236-.573L9.38 8.236C9.538 8.08 9.728 8 9.953 8c.224 0 .415.08.572.236L13 10.71l2.475-2.474c.157-.157.348-.236.572-.236.225 0 .415.08.573.236l1.144 1.144c.157.158.236.348.236.573 0 .224-.08.415-.236.572L15.29 13l2.474 2.475c.157.157.236.348.236.572 0 .225-.08.415-.236.573z">
-          </path>
+          <path
+            class="lightbox-close-icon"
+            d="M17.764 16.62l-1.144 1.144c-.158.157-.348.236-.573.236-.224 0-.415-.08-.572-.236L13 15.29l-2.475 2.474c-.157.157-.348.236-.572.236-.225 0-.415-.08-.573-.236L8.236 16.62C8.08 16.462 8 16.272 8 16.047c0-.224.08-.415.236-.572L10.71 13l-2.474-2.475C8.08 10.368 8 10.177 8 9.953c0-.225.08-.415.236-.573L9.38 8.236C9.538 8.08 9.728 8 9.953 8c.224 0 .415.08.572.236L13 10.71l2.475-2.474c.157-.157.348-.236.572-.236.225 0 .415.08.573.236l1.144 1.144c.157.158.236.348.236.573 0 .224-.08.415-.236.572L15.29 13l2.474 2.475c.157.157.236.348.236.572 0 .225-.08.415-.236.573z"
+          ></path>
         </svg>
       </button>
       <div class="modal-body">
         <div class="ucla-popup-img-container">
-          <img src="https://v.fastcdn.co/u/23b46e4b/63517048-0-Edward-J.-McPherson-.jpeg" alt="Edward J. McPherson, MD">
+          <img
+            src="https://v.fastcdn.co/u/23b46e4b/63517048-0-Edward-J.-McPherson-.jpeg"
+            alt="Edward J. McPherson, MD"
+          />
         </div>
         <div class="ucla-popup-text-container">
           <h1 class="ucla-popup-title">Edward J. McPherson, MD</h1>
@@ -798,13 +1088,19 @@ function loadScript(url, callback) {
             جراحة استبدال المفاصل والحفاظ عليها - جراحة عظام الورك والركبة
           </h2>
           <p>
-            <span style="font-weight: 700; margin-bottom: 5px;">تعليم</span>
+            <span style="font-weight: 700; margin-bottom: 5px">تعليم</span>
             <span>شهادة البورد الطبي</span>
-            <span style="margin-bottom: 5px;">جراحة العظام ، البورد الأمريكي لجراحة العظام ، 1995</span>
+            <span style="margin-bottom: 5px"
+              >جراحة العظام ، البورد الأمريكي لجراحة العظام ، 1995</span
+            >
             <span>الزمالة</span>
-            <span style="margin-bottom: 5px;">عيادة كيرلان جوبي لتقويم العظام ، 1992</span>
+            <span style="margin-bottom: 5px"
+              >عيادة كيرلان جوبي لتقويم العظام ، 1992</span
+            >
             <span>الإقامة</span>
-            <span style="margin-bottom: 5px;">جامعة كارولينا الجنوبية الطبية ، 1991</span>
+            <span style="margin-bottom: 5px"
+              >جامعة كارولينا الجنوبية الطبية ، 1991</span
+            >
             <span>التدريب الداخلي</span>
             <span>مركز كيرن الطبي ، 1987</span>
           </p>
@@ -813,13 +1109,16 @@ function loadScript(url, callback) {
       <div class="modal-footer">
         <a
           href="tel:3102133337"
-          class="url-link btn btn-shadow item-block" target="_blank"
+          class="url-link btn btn-shadow item-block"
+          target="_blank"
         >
           اتصل بنا 3337-213 (310)
         </a>
         <a
-          href="https://uclahs.az1.qualtrics.com/jfe/form/SV_d13P9YvXEn8MPEq?Q_Language=AR&utm_source=facebook_paid&utm_medium=paid_social&utm_campaign=orthopedic_mena_patient"
-          class="url-link btn btn-shadow item-block" target="_blank">
+          href="https://uclahs.az1.qualtrics.com/jfe/form/SV_cwCJpClWLtZTMGi?Q_Language=AR&utm_source=linkedin_paid&utm_medium=display&utm_campaign=orthopedic_mena_hcp"
+          class="url-link btn btn-shadow item-block"
+          target="_blank"
+        >
           حدد موعدًا
         </a>
       </div>
@@ -830,18 +1129,30 @@ function loadScript(url, callback) {
 <div id="modal-stavrakis" class="ucla-popup lightbox item-cover">
   <div class="lightbox-dim">
     <div class="lightbox-content">
-      <button class="lightbox-close lightbox-close-btn item-cover item-absolute" aria-label="Close dialog">
-        <svg xmlns="http://www.w3.org/2000/svg" height="26" width="26" class="lightbox-btn-svg">
+      <button
+        class="lightbox-close lightbox-close-btn item-cover item-absolute"
+        aria-label="Close dialog"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="26"
+          width="26"
+          class="lightbox-btn-svg"
+        >
           <circle class="lightbox-close-icon" cx="13" cy="13" r="13"></circle>
           <circle cx="13" cy="13" r="11"></circle>
-          <path class="lightbox-close-icon"
-            d="M17.764 16.62l-1.144 1.144c-.158.157-.348.236-.573.236-.224 0-.415-.08-.572-.236L13 15.29l-2.475 2.474c-.157.157-.348.236-.572.236-.225 0-.415-.08-.573-.236L8.236 16.62C8.08 16.462 8 16.272 8 16.047c0-.224.08-.415.236-.572L10.71 13l-2.474-2.475C8.08 10.368 8 10.177 8 9.953c0-.225.08-.415.236-.573L9.38 8.236C9.538 8.08 9.728 8 9.953 8c.224 0 .415.08.572.236L13 10.71l2.475-2.474c.157-.157.348-.236.572-.236.225 0 .415.08.573.236l1.144 1.144c.157.158.236.348.236.573 0 .224-.08.415-.236.572L15.29 13l2.474 2.475c.157.157.236.348.236.572 0 .225-.08.415-.236.573z">
-          </path>
+          <path
+            class="lightbox-close-icon"
+            d="M17.764 16.62l-1.144 1.144c-.158.157-.348.236-.573.236-.224 0-.415-.08-.572-.236L13 15.29l-2.475 2.474c-.157.157-.348.236-.572.236-.225 0-.415-.08-.573-.236L8.236 16.62C8.08 16.462 8 16.272 8 16.047c0-.224.08-.415.236-.572L10.71 13l-2.474-2.475C8.08 10.368 8 10.177 8 9.953c0-.225.08-.415.236-.573L9.38 8.236C9.538 8.08 9.728 8 9.953 8c.224 0 .415.08.572.236L13 10.71l2.475-2.474c.157-.157.348-.236.572-.236.225 0 .415.08.573.236l1.144 1.144c.157.158.236.348.236.573 0 .224-.08.415-.236.572L15.29 13l2.474 2.475c.157.157.236.348.236.572 0 .225-.08.415-.236.573z"
+          ></path>
         </svg>
       </button>
       <div class="modal-body">
         <div class="ucla-popup-img-container">
-          <img src="https://v.fastcdn.co/u/23b46e4b/63517052-0-Alexandra-I.-Stavrak.jpeg" alt="Alexandra Stavrakis, MD">
+          <img
+            src="https://v.fastcdn.co/u/23b46e4b/63517052-0-Alexandra-I.-Stavrak.jpeg"
+            alt="Alexandra Stavrakis, MD"
+          />
         </div>
         <div class="ucla-popup-text-container">
           <h1 class="ucla-popup-title">Alexandra Stavrakis, MD</h1>
@@ -849,20 +1160,30 @@ function loadScript(url, callback) {
             جراحة استبدال المفاصل والحفاظ عليها - جراحة عظام الورك والركبة
           </h2>
           <p>
-            الدكتورة ألكسندرا ستافراكيس حاصلة على شهادة البورد في جراحة العظام مع تدريب متخصص في استبدال مفصل الورك والركبة واستبدال مفصل المراجعة المعقدة. تقدم العلاج الجراحي لآلام الورك والركبة الثانوية لحالات التهاب المفاصل وكذلك لكسور الورك وغيرها من إصابات الأطراف السفلية. يتمتع الدكتور ستافراكيس بخبرة واسعة في جراحة استبدال المفاصل بمساعدة الروبوت ويستخدم المساعدة الروبوتية عند الحاجة. وهي متخصصة أيضًا في مراجعات تقويم المفاصل المعقدة ، والتي تكون مطلوبة أحيانًا لاستبدال الورك والركبة الفاشلة.
+            الدكتورة ألكسندرا ستافراكيس حاصلة على شهادة البورد في جراحة العظام
+            مع تدريب متخصص في استبدال مفصل الورك والركبة واستبدال مفصل المراجعة
+            المعقدة. تقدم العلاج الجراحي لآلام الورك والركبة الثانوية لحالات
+            التهاب المفاصل وكذلك لكسور الورك وغيرها من إصابات الأطراف السفلية.
+            يتمتع الدكتور ستافراكيس بخبرة واسعة في جراحة استبدال المفاصل بمساعدة
+            الروبوت ويستخدم المساعدة الروبوتية عند الحاجة. وهي متخصصة أيضًا في
+            مراجعات تقويم المفاصل المعقدة ، والتي تكون مطلوبة أحيانًا لاستبدال
+            الورك والركبة الفاشلة.
           </p>
         </div>
       </div>
       <div class="modal-footer">
         <a
           href="tel:3102133337"
-          class="url-link btn btn-shadow item-block" target="_blank"
+          class="url-link btn btn-shadow item-block"
+          target="_blank"
         >
           اتصل بنا 3337-213 (310)
         </a>
         <a
-          href="https://uclahs.az1.qualtrics.com/jfe/form/SV_d13P9YvXEn8MPEq?Q_Language=AR&utm_source=facebook_paid&utm_medium=paid_social&utm_campaign=orthopedic_mena_patient"
-          class="url-link btn btn-shadow item-block" target="_blank">
+          href="https://uclahs.az1.qualtrics.com/jfe/form/SV_cwCJpClWLtZTMGi?Q_Language=AR&utm_source=linkedin_paid&utm_medium=display&utm_campaign=orthopedic_mena_hcp"
+          class="url-link btn btn-shadow item-block"
+          target="_blank"
+        >
           حدد موعدًا
         </a>
       </div>
@@ -873,18 +1194,30 @@ function loadScript(url, callback) {
 <div id="modal-sassoon" class="ucla-popup lightbox item-cover">
   <div class="lightbox-dim">
     <div class="lightbox-content">
-      <button class="lightbox-close lightbox-close-btn item-cover item-absolute" aria-label="Close dialog">
-        <svg xmlns="http://www.w3.org/2000/svg" height="26" width="26" class="lightbox-btn-svg">
+      <button
+        class="lightbox-close lightbox-close-btn item-cover item-absolute"
+        aria-label="Close dialog"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="26"
+          width="26"
+          class="lightbox-btn-svg"
+        >
           <circle class="lightbox-close-icon" cx="13" cy="13" r="13"></circle>
           <circle cx="13" cy="13" r="11"></circle>
-          <path class="lightbox-close-icon"
-            d="M17.764 16.62l-1.144 1.144c-.158.157-.348.236-.573.236-.224 0-.415-.08-.572-.236L13 15.29l-2.475 2.474c-.157.157-.348.236-.572.236-.225 0-.415-.08-.573-.236L8.236 16.62C8.08 16.462 8 16.272 8 16.047c0-.224.08-.415.236-.572L10.71 13l-2.474-2.475C8.08 10.368 8 10.177 8 9.953c0-.225.08-.415.236-.573L9.38 8.236C9.538 8.08 9.728 8 9.953 8c.224 0 .415.08.572.236L13 10.71l2.475-2.474c.157-.157.348-.236.572-.236.225 0 .415.08.573.236l1.144 1.144c.157.158.236.348.236.573 0 .224-.08.415-.236.572L15.29 13l2.474 2.475c.157.157.236.348.236.572 0 .225-.08.415-.236.573z">
-          </path>
+          <path
+            class="lightbox-close-icon"
+            d="M17.764 16.62l-1.144 1.144c-.158.157-.348.236-.573.236-.224 0-.415-.08-.572-.236L13 15.29l-2.475 2.474c-.157.157-.348.236-.572.236-.225 0-.415-.08-.573-.236L8.236 16.62C8.08 16.462 8 16.272 8 16.047c0-.224.08-.415.236-.572L10.71 13l-2.474-2.475C8.08 10.368 8 10.177 8 9.953c0-.225.08-.415.236-.573L9.38 8.236C9.538 8.08 9.728 8 9.953 8c.224 0 .415.08.572.236L13 10.71l2.475-2.474c.157-.157.348-.236.572-.236.225 0 .415.08.573.236l1.144 1.144c.157.158.236.348.236.573 0 .224-.08.415-.236.572L15.29 13l2.474 2.475c.157.157.236.348.236.572 0 .225-.08.415-.236.573z"
+          ></path>
         </svg>
       </button>
       <div class="modal-body">
         <div class="ucla-popup-img-container">
-          <img src="https://v.fastcdn.co/u/23b46e4b/63517056-0-Adam-A.-Sassoon-MD-M.jpeg" alt="Adam A. Sassoon, MD, MS">
+          <img
+            src="https://v.fastcdn.co/u/23b46e4b/63517056-0-Adam-A.-Sassoon-MD-M.jpeg"
+            alt="Adam A. Sassoon, MD, MS"
+          />
         </div>
         <div class="ucla-popup-text-container">
           <h1 class="ucla-popup-title">Adam A. Sassoon, MD, MS</h1>
@@ -892,21 +1225,34 @@ function loadScript(url, callback) {
             جراحة استبدال المفاصل والحفاظ عليها - جراحة عظام الورك والركبة
           </h2>
           <p>
-            <span>الدكتور ساسون هو جراح عظام مُدرب في الزمالة المزدوجة ولديه خبرة في الحفاظ على / إعادة بناء المفاصل وعلاج إصابات العظام. تشمل اهتماماته السريرية الحالية جراحة تقويم مفاصل أولية ومراجعة معقدة ، وجراحة الحفاظ على مفصل الورك المفتوحة ، وكسور الأطراف الصناعية ، وتصحيح / إعادة بناء تشوه الشباب البالغين / المراهقين. عمل</span>
-            <span>سابقًا في جامعة واشنطن في سياتل لمدة أربع سنوات. على الرغم من أن هذه كانت تجربة رائعة ، إلا أنه متحمس للغاية للانتقال إلى منزله في لوس أنجلوس ورعاية Angelinos في مركز UCLA Santa Monica الطبي.</span>
+            <span
+              >الدكتور ساسون هو جراح عظام مُدرب في الزمالة المزدوجة ولديه خبرة
+              في الحفاظ على / إعادة بناء المفاصل وعلاج إصابات العظام. تشمل
+              اهتماماته السريرية الحالية جراحة تقويم مفاصل أولية ومراجعة معقدة ،
+              وجراحة الحفاظ على مفصل الورك المفتوحة ، وكسور الأطراف الصناعية ،
+              وتصحيح / إعادة بناء تشوه الشباب البالغين / المراهقين. عمل</span
+            >
+            <span
+              >سابقًا في جامعة واشنطن في سياتل لمدة أربع سنوات. على الرغم من أن
+              هذه كانت تجربة رائعة ، إلا أنه متحمس للغاية للانتقال إلى منزله في
+              لوس أنجلوس ورعاية Angelinos في مركز UCLA Santa Monica الطبي.</span
+            >
           </p>
         </div>
       </div>
       <div class="modal-footer">
         <a
           href="tel:3102133337"
-          class="url-link btn btn-shadow item-block" target="_blank"
+          class="url-link btn btn-shadow item-block"
+          target="_blank"
         >
           اتصل بنا 3337-213 (310)
         </a>
         <a
-          href="https://uclahs.az1.qualtrics.com/jfe/form/SV_d13P9YvXEn8MPEq?Q_Language=AR&utm_source=facebook_paid&utm_medium=paid_social&utm_campaign=orthopedic_mena_patient"
-          class="url-link btn btn-shadow item-block" target="_blank">
+          href="https://uclahs.az1.qualtrics.com/jfe/form/SV_cwCJpClWLtZTMGi?Q_Language=AR&utm_source=linkedin_paid&utm_medium=display&utm_campaign=orthopedic_mena_hcp"
+          class="url-link btn btn-shadow item-block"
+          target="_blank"
+        >
           حدد موعدًا
         </a>
       </div>
@@ -917,18 +1263,30 @@ function loadScript(url, callback) {
 <div id="modal-zeegen" class="ucla-popup lightbox item-cover">
   <div class="lightbox-dim">
     <div class="lightbox-content">
-      <button class="lightbox-close lightbox-close-btn item-cover item-absolute" aria-label="Close dialog">
-        <svg xmlns="http://www.w3.org/2000/svg" height="26" width="26" class="lightbox-btn-svg">
+      <button
+        class="lightbox-close lightbox-close-btn item-cover item-absolute"
+        aria-label="Close dialog"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="26"
+          width="26"
+          class="lightbox-btn-svg"
+        >
           <circle class="lightbox-close-icon" cx="13" cy="13" r="13"></circle>
           <circle cx="13" cy="13" r="11"></circle>
-          <path class="lightbox-close-icon"
-            d="M17.764 16.62l-1.144 1.144c-.158.157-.348.236-.573.236-.224 0-.415-.08-.572-.236L13 15.29l-2.475 2.474c-.157.157-.348.236-.572.236-.225 0-.415-.08-.573-.236L8.236 16.62C8.08 16.462 8 16.272 8 16.047c0-.224.08-.415.236-.572L10.71 13l-2.474-2.475C8.08 10.368 8 10.177 8 9.953c0-.225.08-.415.236-.573L9.38 8.236C9.538 8.08 9.728 8 9.953 8c.224 0 .415.08.572.236L13 10.71l2.475-2.474c.157-.157.348-.236.572-.236.225 0 .415.08.573.236l1.144 1.144c.157.158.236.348.236.573 0 .224-.08.415-.236.572L15.29 13l2.474 2.475c.157.157.236.348.236.572 0 .225-.08.415-.236.573z">
-          </path>
+          <path
+            class="lightbox-close-icon"
+            d="M17.764 16.62l-1.144 1.144c-.158.157-.348.236-.573.236-.224 0-.415-.08-.572-.236L13 15.29l-2.475 2.474c-.157.157-.348.236-.572.236-.225 0-.415-.08-.573-.236L8.236 16.62C8.08 16.462 8 16.272 8 16.047c0-.224.08-.415.236-.572L10.71 13l-2.474-2.475C8.08 10.368 8 10.177 8 9.953c0-.225.08-.415.236-.573L9.38 8.236C9.538 8.08 9.728 8 9.953 8c.224 0 .415.08.572.236L13 10.71l2.475-2.474c.157-.157.348-.236.572-.236.225 0 .415.08.573.236l1.144 1.144c.157.158.236.348.236.573 0 .224-.08.415-.236.572L15.29 13l2.474 2.475c.157.157.236.348.236.572 0 .225-.08.415-.236.573z"
+          ></path>
         </svg>
       </button>
       <div class="modal-body">
         <div class="ucla-popup-img-container">
-          <img src="https://v.fastcdn.co/u/23b46e4b/63517051-0-Erik-N.-Zeegen-MD--2.jpeg" alt="Erik N. Zeegen, MD">
+          <img
+            src="https://v.fastcdn.co/u/23b46e4b/63517051-0-Erik-N.-Zeegen-MD--2.jpeg"
+            alt="Erik N. Zeegen, MD"
+          />
         </div>
         <div class="ucla-popup-text-container">
           <h1 class="ucla-popup-title">Erik N. Zeegen, MD</h1>
@@ -936,20 +1294,28 @@ function loadScript(url, callback) {
             جراحة استبدال المفاصل والحفاظ عليها - جراحة عظام الورك والركبة
           </h2>
           <p>
-            الدكتور إريك إن زيغن هو جراح عظام معتمد من البورد ومتخصص في جراحة استبدال المفصل ولديه خبرة واسعة في جراحة استبدال مفصل الورك الأمامي وجراحة استبدال الركبة الأقل توغلاً وجراحة استبدال الركبة بمساعدة الروبوت وجراحة المراجعة المعقدة للورك والركبة البدائل التي فشلت. الدكتور زيجين هو رئيس قسم جراحة استبدال المفاصل في جامعة كاليفورنيا في لوس أنجلوس.
+            الدكتور إريك إن زيغن هو جراح عظام معتمد من البورد ومتخصص في جراحة
+            استبدال المفصل ولديه خبرة واسعة في جراحة استبدال مفصل الورك الأمامي
+            وجراحة استبدال الركبة الأقل توغلاً وجراحة استبدال الركبة بمساعدة
+            الروبوت وجراحة المراجعة المعقدة للورك والركبة البدائل التي فشلت.
+            الدكتور زيجين هو رئيس قسم جراحة استبدال المفاصل في جامعة كاليفورنيا
+            في لوس أنجلوس.
           </p>
         </div>
       </div>
       <div class="modal-footer">
         <a
           href="tel:3102133337"
-          class="url-link btn btn-shadow item-block" target="_blank"
+          class="url-link btn btn-shadow item-block"
+          target="_blank"
         >
           اتصل بنا 3337-213 (310)
         </a>
         <a
-          href="https://uclahs.az1.qualtrics.com/jfe/form/SV_d13P9YvXEn8MPEq?Q_Language=AR&utm_source=facebook_paid&utm_medium=paid_social&utm_campaign=orthopedic_mena_patient"
-          class="url-link btn btn-shadow item-block" target="_blank">
+          href="https://uclahs.az1.qualtrics.com/jfe/form/SV_cwCJpClWLtZTMGi?Q_Language=AR&utm_source=linkedin_paid&utm_medium=display&utm_campaign=orthopedic_mena_hcp"
+          class="url-link btn btn-shadow item-block"
+          target="_blank"
+        >
           حدد موعدًا
         </a>
       </div>
@@ -960,18 +1326,30 @@ function loadScript(url, callback) {
 <div id="modal-lord" class="ucla-popup lightbox item-cover">
   <div class="lightbox-dim">
     <div class="lightbox-content">
-      <button class="lightbox-close lightbox-close-btn item-cover item-absolute" aria-label="Close dialog">
-        <svg xmlns="http://www.w3.org/2000/svg" height="26" width="26" class="lightbox-btn-svg">
+      <button
+        class="lightbox-close lightbox-close-btn item-cover item-absolute"
+        aria-label="Close dialog"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="26"
+          width="26"
+          class="lightbox-btn-svg"
+        >
           <circle class="lightbox-close-icon" cx="13" cy="13" r="13"></circle>
           <circle cx="13" cy="13" r="11"></circle>
-          <path class="lightbox-close-icon"
-            d="M17.764 16.62l-1.144 1.144c-.158.157-.348.236-.573.236-.224 0-.415-.08-.572-.236L13 15.29l-2.475 2.474c-.157.157-.348.236-.572.236-.225 0-.415-.08-.573-.236L8.236 16.62C8.08 16.462 8 16.272 8 16.047c0-.224.08-.415.236-.572L10.71 13l-2.474-2.475C8.08 10.368 8 10.177 8 9.953c0-.225.08-.415.236-.573L9.38 8.236C9.538 8.08 9.728 8 9.953 8c.224 0 .415.08.572.236L13 10.71l2.475-2.474c.157-.157.348-.236.572-.236.225 0 .415.08.573.236l1.144 1.144c.157.158.236.348.236.573 0 .224-.08.415-.236.572L15.29 13l2.474 2.475c.157.157.236.348.236.572 0 .225-.08.415-.236.573z">
-          </path>
+          <path
+            class="lightbox-close-icon"
+            d="M17.764 16.62l-1.144 1.144c-.158.157-.348.236-.573.236-.224 0-.415-.08-.572-.236L13 15.29l-2.475 2.474c-.157.157-.348.236-.572.236-.225 0-.415-.08-.573-.236L8.236 16.62C8.08 16.462 8 16.272 8 16.047c0-.224.08-.415.236-.572L10.71 13l-2.474-2.475C8.08 10.368 8 10.177 8 9.953c0-.225.08-.415.236-.573L9.38 8.236C9.538 8.08 9.728 8 9.953 8c.224 0 .415.08.572.236L13 10.71l2.475-2.474c.157-.157.348-.236.572-.236.225 0 .415.08.573.236l1.144 1.144c.157.158.236.348.236.573 0 .224-.08.415-.236.572L15.29 13l2.474 2.475c.157.157.236.348.236.572 0 .225-.08.415-.236.573z"
+          ></path>
         </svg>
       </button>
       <div class="modal-body">
         <div class="ucla-popup-img-container">
-          <img src="https://v.fastcdn.co/u/23b46e4b/63611996-0--Elizabeth-L.-Lord-2.jpg" alt="Elizabeth L. Lord, MD">
+          <img
+            src="https://v.fastcdn.co/u/23b46e4b/63611996-0--Elizabeth-L.-Lord-2.jpg"
+            alt="Elizabeth L. Lord, MD"
+          />
         </div>
         <div class="ucla-popup-text-container">
           <h1 class="ucla-popup-title">Elizabeth L. Lord, MD</h1>
@@ -979,20 +1357,27 @@ function loadScript(url, callback) {
             اضطرابات العمود الفقري - جراحة العمود الفقري
           </h2>
           <p>
-            الدكتورة إليزابيث لورد حاصلة على الزمالة المعتمدة في جراحة العمود الفقري وأستاذ مساعد في جراحة العظام وجراحة الأعصاب. الدكتور لورد متخصص في حالات العمود الفقري المعقدة بما في ذلك تشوه العمود الفقري للبالغين والمراهقين والجنف والجراحة الترميمية للعمود الفقري العنقي والصدري والقطني والأورام الأولية والنقيلة للعمود الفقري.
+            الدكتورة إليزابيث لورد حاصلة على الزمالة المعتمدة في جراحة العمود
+            الفقري وأستاذ مساعد في جراحة العظام وجراحة الأعصاب. الدكتور لورد
+            متخصص في حالات العمود الفقري المعقدة بما في ذلك تشوه العمود الفقري
+            للبالغين والمراهقين والجنف والجراحة الترميمية للعمود الفقري العنقي
+            والصدري والقطني والأورام الأولية والنقيلة للعمود الفقري.
           </p>
         </div>
       </div>
       <div class="modal-footer">
         <a
           href="tel:3102133337"
-          class="url-link btn btn-shadow item-block" target="_blank"
+          class="url-link btn btn-shadow item-block"
+          target="_blank"
         >
           اتصل بنا 3337-213 (310)
         </a>
         <a
-          href="https://uclahs.az1.qualtrics.com/jfe/form/SV_d13P9YvXEn8MPEq?Q_Language=AR&utm_source=facebook_paid&utm_medium=paid_social&utm_campaign=orthopedic_mena_patient"
-          class="url-link btn btn-shadow item-block" target="_blank">
+          href="https://uclahs.az1.qualtrics.com/jfe/form/SV_cwCJpClWLtZTMGi?Q_Language=AR&utm_source=linkedin_paid&utm_medium=display&utm_campaign=orthopedic_mena_hcp"
+          class="url-link btn btn-shadow item-block"
+          target="_blank"
+        >
           حدد موعدًا
         </a>
       </div>
@@ -1003,38 +1388,70 @@ function loadScript(url, callback) {
 <div id="modal-shamie" class="ucla-popup lightbox item-cover">
   <div class="lightbox-dim">
     <div class="lightbox-content">
-      <button class="lightbox-close lightbox-close-btn item-cover item-absolute" aria-label="Close dialog">
-        <svg xmlns="http://www.w3.org/2000/svg" height="26" width="26" class="lightbox-btn-svg">
+      <button
+        class="lightbox-close lightbox-close-btn item-cover item-absolute"
+        aria-label="Close dialog"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="26"
+          width="26"
+          class="lightbox-btn-svg"
+        >
           <circle class="lightbox-close-icon" cx="13" cy="13" r="13"></circle>
           <circle cx="13" cy="13" r="11"></circle>
-          <path class="lightbox-close-icon"
-            d="M17.764 16.62l-1.144 1.144c-.158.157-.348.236-.573.236-.224 0-.415-.08-.572-.236L13 15.29l-2.475 2.474c-.157.157-.348.236-.572.236-.225 0-.415-.08-.573-.236L8.236 16.62C8.08 16.462 8 16.272 8 16.047c0-.224.08-.415.236-.572L10.71 13l-2.474-2.475C8.08 10.368 8 10.177 8 9.953c0-.225.08-.415.236-.573L9.38 8.236C9.538 8.08 9.728 8 9.953 8c.224 0 .415.08.572.236L13 10.71l2.475-2.474c.157-.157.348-.236.572-.236.225 0 .415.08.573.236l1.144 1.144c.157.158.236.348.236.573 0 .224-.08.415-.236.572L15.29 13l2.474 2.475c.157.157.236.348.236.572 0 .225-.08.415-.236.573z">
-          </path>
+          <path
+            class="lightbox-close-icon"
+            d="M17.764 16.62l-1.144 1.144c-.158.157-.348.236-.573.236-.224 0-.415-.08-.572-.236L13 15.29l-2.475 2.474c-.157.157-.348.236-.572.236-.225 0-.415-.08-.573-.236L8.236 16.62C8.08 16.462 8 16.272 8 16.047c0-.224.08-.415.236-.572L10.71 13l-2.474-2.475C8.08 10.368 8 10.177 8 9.953c0-.225.08-.415.236-.573L9.38 8.236C9.538 8.08 9.728 8 9.953 8c.224 0 .415.08.572.236L13 10.71l2.475-2.474c.157-.157.348-.236.572-.236.225 0 .415.08.573.236l1.144 1.144c.157.158.236.348.236.573 0 .224-.08.415-.236.572L15.29 13l2.474 2.475c.157.157.236.348.236.572 0 .225-.08.415-.236.573z"
+          ></path>
         </svg>
       </button>
       <div class="modal-body">
         <div class="ucla-popup-img-container">
-          <img src="https://v.fastcdn.co/u/23b46e4b/63612005-0-Arya-N.-Shamie-240x3.jpg" alt="Arya N. Shamie, MD">
+          <img
+            src="https://v.fastcdn.co/u/23b46e4b/63612005-0-Arya-N.-Shamie-240x3.jpg"
+            alt="Arya N. Shamie, MD"
+          />
         </div>
         <div class="ucla-popup-text-container">
           <h1 class="ucla-popup-title">Arya N. Shamie, MD</h1>
-          <h2 class="ucla-popup-subtitle">اضطرابات العمود الفقري - جراحة العمود الفقري</h2>
+          <h2 class="ucla-popup-subtitle">
+            اضطرابات العمود الفقري - جراحة العمود الفقري
+          </h2>
           <p>
-            <span>أ. نيك شامي ، دكتوراه في الطب ، أستاذ جراحة العظام وجراحة الأعصاب في كلية الطب بجامعة كاليفورنيا في لوس أنجلوس</span>
-            <span>الدكتور نيك شامي هو جراح العمود الفقري المعتمد من مجلس الإدارة. يشغل منصب رئيس جراحة العظام والعمود الفقري وأستاذ جراحة العظام وجراحة الأعصاب في كلية الطب بجامعة كاليفورنيا في لوس أنجلوس. لقد عمل في كلية الطب بجامعة كاليفورنيا في لوس أنجلوس منذ عام 2000. يشارك الدكتور شامي بنشاط في التعليم الطبي للخريجين ، ويقدم خبرته للمساعدة في تثقيف طلاب الطب والمقيمين والزملاء. بالإضافة إلى ذلك ، يشارك بنشاط في مشاريع البحث العلمي والسريري ذات الصلة باضطرابات العمود الفقري. حصل الدكتور شامي على جائزة زمالة داوسون للسفر من كلية الطب بجامعة كاليفورنيا في آي للتميز في البحث العلمي وأبحاث الجنف. وقد شغل منصب رئيس الكلية الأمريكية لجراحة العمود الفقري لفترتين.</span>
+            <span
+              >أ. نيك شامي ، دكتوراه في الطب ، أستاذ جراحة العظام وجراحة الأعصاب
+              في كلية الطب بجامعة كاليفورنيا في لوس أنجلوس</span
+            >
+            <span
+              >الدكتور نيك شامي هو جراح العمود الفقري المعتمد من مجلس الإدارة.
+              يشغل منصب رئيس جراحة العظام والعمود الفقري وأستاذ جراحة العظام
+              وجراحة الأعصاب في كلية الطب بجامعة كاليفورنيا في لوس أنجلوس. لقد
+              عمل في كلية الطب بجامعة كاليفورنيا في لوس أنجلوس منذ عام 2000.
+              يشارك الدكتور شامي بنشاط في التعليم الطبي للخريجين ، ويقدم خبرته
+              للمساعدة في تثقيف طلاب الطب والمقيمين والزملاء. بالإضافة إلى ذلك ،
+              يشارك بنشاط في مشاريع البحث العلمي والسريري ذات الصلة باضطرابات
+              العمود الفقري. حصل الدكتور شامي على جائزة زمالة داوسون للسفر من
+              كلية الطب بجامعة كاليفورنيا في آي للتميز في البحث العلمي وأبحاث
+              الجنف. وقد شغل منصب رئيس الكلية الأمريكية لجراحة العمود الفقري
+              لفترتين.</span
+            >
           </p>
         </div>
       </div>
       <div class="modal-footer">
         <a
           href="tel:3102133337"
-          class="url-link btn btn-shadow item-block" target="_blank"
+          class="url-link btn btn-shadow item-block"
+          target="_blank"
         >
           اتصل بنا 3337-213 (310)
         </a>
         <a
-          href="https://uclahs.az1.qualtrics.com/jfe/form/SV_d13P9YvXEn8MPEq?Q_Language=AR&utm_source=facebook_paid&utm_medium=paid_social&utm_campaign=orthopedic_mena_patient"
-          class="url-link btn btn-shadow item-block" target="_blank">
+          href="https://uclahs.az1.qualtrics.com/jfe/form/SV_cwCJpClWLtZTMGi?Q_Language=AR&utm_source=linkedin_paid&utm_medium=display&utm_campaign=orthopedic_mena_hcp"
+          class="url-link btn btn-shadow item-block"
+          target="_blank"
+        >
           حدد موعدًا
         </a>
       </div>
@@ -1045,37 +1462,60 @@ function loadScript(url, callback) {
 <div id="modal-park" class="ucla-popup lightbox item-cover">
   <div class="lightbox-dim">
     <div class="lightbox-content">
-      <button class="lightbox-close lightbox-close-btn item-cover item-absolute" aria-label="Close dialog">
-        <svg xmlns="http://www.w3.org/2000/svg" height="26" width="26" class="lightbox-btn-svg">
+      <button
+        class="lightbox-close lightbox-close-btn item-cover item-absolute"
+        aria-label="Close dialog"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="26"
+          width="26"
+          class="lightbox-btn-svg"
+        >
           <circle class="lightbox-close-icon" cx="13" cy="13" r="13"></circle>
           <circle cx="13" cy="13" r="11"></circle>
-          <path class="lightbox-close-icon"
-            d="M17.764 16.62l-1.144 1.144c-.158.157-.348.236-.573.236-.224 0-.415-.08-.572-.236L13 15.29l-2.475 2.474c-.157.157-.348.236-.572.236-.225 0-.415-.08-.573-.236L8.236 16.62C8.08 16.462 8 16.272 8 16.047c0-.224.08-.415.236-.572L10.71 13l-2.474-2.475C8.08 10.368 8 10.177 8 9.953c0-.225.08-.415.236-.573L9.38 8.236C9.538 8.08 9.728 8 9.953 8c.224 0 .415.08.572.236L13 10.71l2.475-2.474c.157-.157.348-.236.572-.236.225 0 .415.08.573.236l1.144 1.144c.157.158.236.348.236.573 0 .224-.08.415-.236.572L15.29 13l2.474 2.475c.157.157.236.348.236.572 0 .225-.08.415-.236.573z">
-          </path>
+          <path
+            class="lightbox-close-icon"
+            d="M17.764 16.62l-1.144 1.144c-.158.157-.348.236-.573.236-.224 0-.415-.08-.572-.236L13 15.29l-2.475 2.474c-.157.157-.348.236-.572.236-.225 0-.415-.08-.573-.236L8.236 16.62C8.08 16.462 8 16.272 8 16.047c0-.224.08-.415.236-.572L10.71 13l-2.474-2.475C8.08 10.368 8 10.177 8 9.953c0-.225.08-.415.236-.573L9.38 8.236C9.538 8.08 9.728 8 9.953 8c.224 0 .415.08.572.236L13 10.71l2.475-2.474c.157-.157.348-.236.572-.236.225 0 .415.08.573.236l1.144 1.144c.157.158.236.348.236.573 0 .224-.08.415-.236.572L15.29 13l2.474 2.475c.157.157.236.348.236.572 0 .225-.08.415-.236.573z"
+          ></path>
         </svg>
       </button>
       <div class="modal-body">
         <div class="ucla-popup-img-container">
-          <img src="https://v.fastcdn.co/u/23b46e4b/63612001-0-Don-Young-Park-240x3.jpg" alt="Don Young Park, MD">
+          <img
+            src="https://v.fastcdn.co/u/23b46e4b/63612001-0-Don-Young-Park-240x3.jpg"
+            alt="Don Young Park, MD"
+          />
         </div>
         <div class="ucla-popup-text-container">
           <h1 class="ucla-popup-title">Don Young Park, MD</h1>
-          <h2 class="ucla-popup-subtitle">اضطرابات العمود الفقري - جراحة العمود الفقري</h2>
+          <h2 class="ucla-popup-subtitle">
+            اضطرابات العمود الفقري - جراحة العمود الفقري
+          </h2>
           <p>
-            الدكتور دون يونغ بارك حاصل على الزمالة في جراحة العظام والعمود الفقري مع خبرة في جراحة العمود الفقري طفيفة التوغل. إنه يستخدم تقنيات متطورة طفيفة التوغل ، بما في ذلك تنظير العمود الفقري ، لعلاج الحالات التنكسية في العمود الفقري ، وتشوه العمود الفقري ، وأورام العمود الفقري ، وصدمات العمود الفقري. يشغل الدكتور بارك منصب نائب رئيس قسم الجودة والسلامة في قسم جراحة العظام بجامعة كاليفورنيا في لوس أنجلوس.
+            الدكتور دون يونغ بارك حاصل على الزمالة في جراحة العظام والعمود
+            الفقري مع خبرة في جراحة العمود الفقري طفيفة التوغل. إنه يستخدم
+            تقنيات متطورة طفيفة التوغل ، بما في ذلك تنظير العمود الفقري ، لعلاج
+            الحالات التنكسية في العمود الفقري ، وتشوه العمود الفقري ، وأورام
+            العمود الفقري ، وصدمات العمود الفقري. يشغل الدكتور بارك منصب نائب
+            رئيس قسم الجودة والسلامة في قسم جراحة العظام بجامعة كاليفورنيا في
+            لوس أنجلوس.
           </p>
         </div>
       </div>
       <div class="modal-footer">
         <a
           href="tel:3102133337"
-          class="url-link btn btn-shadow item-block" target="_blank"
+          class="url-link btn btn-shadow item-block"
+          target="_blank"
         >
           اتصل بنا 3337-213 (310)
         </a>
         <a
-          href="https://uclahs.az1.qualtrics.com/jfe/form/SV_d13P9YvXEn8MPEq?Q_Language=AR&utm_source=facebook_paid&utm_medium=paid_social&utm_campaign=orthopedic_mena_patient"
-          class="url-link btn btn-shadow item-block" target="_blank">
+          href="https://uclahs.az1.qualtrics.com/jfe/form/SV_cwCJpClWLtZTMGi?Q_Language=AR&utm_source=linkedin_paid&utm_medium=display&utm_campaign=orthopedic_mena_hcp"
+          class="url-link btn btn-shadow item-block"
+          target="_blank"
+        >
           حدد موعدًا
         </a>
       </div>
@@ -1086,37 +1526,61 @@ function loadScript(url, callback) {
 <div id="modal-azari" class="ucla-popup lightbox item-cover">
   <div class="lightbox-dim">
     <div class="lightbox-content">
-      <button class="lightbox-close lightbox-close-btn item-cover item-absolute" aria-label="Close dialog">
-        <svg xmlns="http://www.w3.org/2000/svg" height="26" width="26" class="lightbox-btn-svg">
+      <button
+        class="lightbox-close lightbox-close-btn item-cover item-absolute"
+        aria-label="Close dialog"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="26"
+          width="26"
+          class="lightbox-btn-svg"
+        >
           <circle class="lightbox-close-icon" cx="13" cy="13" r="13"></circle>
           <circle cx="13" cy="13" r="11"></circle>
-          <path class="lightbox-close-icon"
-            d="M17.764 16.62l-1.144 1.144c-.158.157-.348.236-.573.236-.224 0-.415-.08-.572-.236L13 15.29l-2.475 2.474c-.157.157-.348.236-.572.236-.225 0-.415-.08-.573-.236L8.236 16.62C8.08 16.462 8 16.272 8 16.047c0-.224.08-.415.236-.572L10.71 13l-2.474-2.475C8.08 10.368 8 10.177 8 9.953c0-.225.08-.415.236-.573L9.38 8.236C9.538 8.08 9.728 8 9.953 8c.224 0 .415.08.572.236L13 10.71l2.475-2.474c.157-.157.348-.236.572-.236.225 0 .415.08.573.236l1.144 1.144c.157.158.236.348.236.573 0 .224-.08.415-.236.572L15.29 13l2.474 2.475c.157.157.236.348.236.572 0 .225-.08.415-.236.573z">
-          </path>
+          <path
+            class="lightbox-close-icon"
+            d="M17.764 16.62l-1.144 1.144c-.158.157-.348.236-.573.236-.224 0-.415-.08-.572-.236L13 15.29l-2.475 2.474c-.157.157-.348.236-.572.236-.225 0-.415-.08-.573-.236L8.236 16.62C8.08 16.462 8 16.272 8 16.047c0-.224.08-.415.236-.572L10.71 13l-2.474-2.475C8.08 10.368 8 10.177 8 9.953c0-.225.08-.415.236-.573L9.38 8.236C9.538 8.08 9.728 8 9.953 8c.224 0 .415.08.572.236L13 10.71l2.475-2.474c.157-.157.348-.236.572-.236.225 0 .415.08.573.236l1.144 1.144c.157.158.236.348.236.573 0 .224-.08.415-.236.572L15.29 13l2.474 2.475c.157.157.236.348.236.572 0 .225-.08.415-.236.573z"
+          ></path>
         </svg>
       </button>
       <div class="modal-body">
         <div class="ucla-popup-img-container">
-          <img src="https://v.fastcdn.co/u/23b46e4b/63517093-0-Kodi-K.-Azari-MD--24.jpeg" alt="Kodi K. Azari, MD">
+          <img
+            src="https://v.fastcdn.co/u/23b46e4b/63517093-0-Kodi-K.-Azari-MD--24.jpeg"
+            alt="Kodi K. Azari, MD"
+          />
         </div>
         <div class="ucla-popup-text-container">
           <h1 class="ucla-popup-title">Kodi K. Azari, MD</h1>
           <h2 class="ucla-popup-subtitle">تشوه اليد المعقد - جراحة اليد</h2>
           <p>
-            Kodi Azari ، MD ، FACS هو جراح اليد ، وجراح الأوعية الدموية الدقيقة ، وجراح التجميل الترميمي. وهو أستاذ متفرغ في جراحة العظام وجراحة التجميل. يشغل الدكتور أزاري منصب رئيس قسم الزراعة الترميمية في قسم الجراحة وهو المدير الطبي المشارك لعملية Mend وهو برنامج نظام صحي بجامعة كاليفورنيا في لوس أنجلوس يهدف إلى توفير الجراحة الترميمية المعقدة لأفراد الخدمة المصابين في العمليات الحرية الدائمة وحرية العراق . قبل عودته إلى جامعة كاليفورنيا في لوس أنجلوس في عام 2008 ، كان مديرًا لزمالة جراحة اليد في قسم الجراحة التجميلية بجامعة بيتسبرغ. كما شغل منصب رئيس جراحة اليد في مستشفى <span class="whitespace-nowrap">UPMC-Mercy</span>.
+            Kodi Azari ، MD ، FACS هو جراح اليد ، وجراح الأوعية الدموية الدقيقة
+            ، وجراح التجميل الترميمي. وهو أستاذ متفرغ في جراحة العظام وجراحة
+            التجميل. يشغل الدكتور أزاري منصب رئيس قسم الزراعة الترميمية في قسم
+            الجراحة وهو المدير الطبي المشارك لعملية Mend وهو برنامج نظام صحي
+            بجامعة كاليفورنيا في لوس أنجلوس يهدف إلى توفير الجراحة الترميمية
+            المعقدة لأفراد الخدمة المصابين في العمليات الحرية الدائمة وحرية
+            العراق . قبل عودته إلى جامعة كاليفورنيا في لوس أنجلوس في عام 2008 ،
+            كان مديرًا لزمالة جراحة اليد في قسم الجراحة التجميلية بجامعة
+            بيتسبرغ. كما شغل منصب رئيس جراحة اليد في مستشفى
+            <span class="whitespace-nowrap">UPMC-Mercy</span>.
           </p>
         </div>
       </div>
       <div class="modal-footer">
         <a
           href="tel:3102133337"
-          class="url-link btn btn-shadow item-block" target="_blank"
+          class="url-link btn btn-shadow item-block"
+          target="_blank"
         >
           اتصل بنا 3337-213 (310)
         </a>
         <a
-          href="https://uclahs.az1.qualtrics.com/jfe/form/SV_d13P9YvXEn8MPEq?Q_Language=AR&utm_source=facebook_paid&utm_medium=paid_social&utm_campaign=orthopedic_mena_patient"
-          class="url-link btn btn-shadow item-block" target="_blank">
+          href="https://uclahs.az1.qualtrics.com/jfe/form/SV_cwCJpClWLtZTMGi?Q_Language=AR&utm_source=linkedin_paid&utm_medium=display&utm_campaign=orthopedic_mena_hcp"
+          class="url-link btn btn-shadow item-block"
+          target="_blank"
+        >
           حدد موعدًا
         </a>
       </div>
@@ -1127,39 +1591,58 @@ function loadScript(url, callback) {
 <div id="modal-jones" class="ucla-popup lightbox item-cover">
   <div class="lightbox-dim">
     <div class="lightbox-content">
-      <button class="lightbox-close lightbox-close-btn item-cover item-absolute" aria-label="Close dialog">
-        <svg xmlns="http://www.w3.org/2000/svg" height="26" width="26" class="lightbox-btn-svg">
+      <button
+        class="lightbox-close lightbox-close-btn item-cover item-absolute"
+        aria-label="Close dialog"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="26"
+          width="26"
+          class="lightbox-btn-svg"
+        >
           <circle class="lightbox-close-icon" cx="13" cy="13" r="13"></circle>
           <circle cx="13" cy="13" r="11"></circle>
-          <path class="lightbox-close-icon"
-            d="M17.764 16.62l-1.144 1.144c-.158.157-.348.236-.573.236-.224 0-.415-.08-.572-.236L13 15.29l-2.475 2.474c-.157.157-.348.236-.572.236-.225 0-.415-.08-.573-.236L8.236 16.62C8.08 16.462 8 16.272 8 16.047c0-.224.08-.415.236-.572L10.71 13l-2.474-2.475C8.08 10.368 8 10.177 8 9.953c0-.225.08-.415.236-.573L9.38 8.236C9.538 8.08 9.728 8 9.953 8c.224 0 .415.08.572.236L13 10.71l2.475-2.474c.157-.157.348-.236.572-.236.225 0 .415.08.573.236l1.144 1.144c.157.158.236.348.236.573 0 .224-.08.415-.236.572L15.29 13l2.474 2.475c.157.157.236.348.236.572 0 .225-.08.415-.236.573z">
-          </path>
+          <path
+            class="lightbox-close-icon"
+            d="M17.764 16.62l-1.144 1.144c-.158.157-.348.236-.573.236-.224 0-.415-.08-.572-.236L13 15.29l-2.475 2.474c-.157.157-.348.236-.572.236-.225 0-.415-.08-.573-.236L8.236 16.62C8.08 16.462 8 16.272 8 16.047c0-.224.08-.415.236-.572L10.71 13l-2.474-2.475C8.08 10.368 8 10.177 8 9.953c0-.225.08-.415.236-.573L9.38 8.236C9.538 8.08 9.728 8 9.953 8c.224 0 .415.08.572.236L13 10.71l2.475-2.474c.157-.157.348-.236.572-.236.225 0 .415.08.573.236l1.144 1.144c.157.158.236.348.236.573 0 .224-.08.415-.236.572L15.29 13l2.474 2.475c.157.157.236.348.236.572 0 .225-.08.415-.236.573z"
+          ></path>
         </svg>
       </button>
       <div class="modal-body">
         <div class="ucla-popup-img-container">
-          <img src="https://v.fastcdn.co/u/23b46e4b/63517104-0-Neil-F.-Jones-MD--24.jpeg" alt="Neil F. Jones, MD">
+          <img
+            src="https://v.fastcdn.co/u/23b46e4b/63517104-0-Neil-F.-Jones-MD--24.jpeg"
+            alt="Neil F. Jones, MD"
+          />
         </div>
         <div class="ucla-popup-text-container">
           <h1 class="ucla-popup-title">Neil F. Jones, MD</h1>
-          <h2 class="ucla-popup-subtitle">
-            تشوه اليد المعقد - جراحة اليد
-          </h2>
+          <h2 class="ucla-popup-subtitle">تشوه اليد المعقد - جراحة اليد</h2>
           <p>
-            الدكتور نيل جونز هو جراح يد وجراح دقيق في مركز رونالد ريغان الطبي بجامعة كاليفورنيا في لوس أنجلوس ومركز سانتا مونيكا الطبي بجامعة كاليفورنيا. وهو أستاذ متميز في جراحة العظام وأستاذ متميز في الجراحة التجميلية والترميمية ، وهو مشهور محليًا ودوليًا بجراحة اليد المعقدة وإعادة البناء بالجراحة المجهرية ، مع اهتمام كبير بنقل الأوتار وإصلاح الأعصاب ونقل أصابع القدم إلى اليد وإعادة البناء الجراحي الدقيق من الطرف العلوي.
+            الدكتور نيل جونز هو جراح يد وجراح دقيق في مركز رونالد ريغان الطبي
+            بجامعة كاليفورنيا في لوس أنجلوس ومركز سانتا مونيكا الطبي بجامعة
+            كاليفورنيا. وهو أستاذ متميز في جراحة العظام وأستاذ متميز في الجراحة
+            التجميلية والترميمية ، وهو مشهور محليًا ودوليًا بجراحة اليد المعقدة
+            وإعادة البناء بالجراحة المجهرية ، مع اهتمام كبير بنقل الأوتار وإصلاح
+            الأعصاب ونقل أصابع القدم إلى اليد وإعادة البناء الجراحي الدقيق من
+            الطرف العلوي.
           </p>
         </div>
       </div>
       <div class="modal-footer">
         <a
           href="tel:3102133337"
-          class="url-link btn btn-shadow item-block" target="_blank"
+          class="url-link btn btn-shadow item-block"
+          target="_blank"
         >
           اتصل بنا 3337-213 (310)
         </a>
         <a
-          href="https://uclahs.az1.qualtrics.com/jfe/form/SV_d13P9YvXEn8MPEq?Q_Language=AR&utm_source=facebook_paid&utm_medium=paid_social&utm_campaign=orthopedic_mena_patient"
-          class="url-link btn btn-shadow item-block" target="_blank">
+          href="https://uclahs.az1.qualtrics.com/jfe/form/SV_cwCJpClWLtZTMGi?Q_Language=AR&utm_source=linkedin_paid&utm_medium=display&utm_campaign=orthopedic_mena_hcp"
+          class="url-link btn btn-shadow item-block"
+          target="_blank"
+        >
           حدد موعدًا
         </a>
       </div>
@@ -1170,38 +1653,62 @@ function loadScript(url, callback) {
 <div id="modal-benhaim" class="ucla-popup lightbox item-cover">
   <div class="lightbox-dim">
     <div class="lightbox-content">
-      <button class="lightbox-close lightbox-close-btn item-cover item-absolute" aria-label="Close dialog">
-        <svg xmlns="http://www.w3.org/2000/svg" height="26" width="26" class="lightbox-btn-svg">
+      <button
+        class="lightbox-close lightbox-close-btn item-cover item-absolute"
+        aria-label="Close dialog"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="26"
+          width="26"
+          class="lightbox-btn-svg"
+        >
           <circle class="lightbox-close-icon" cx="13" cy="13" r="13"></circle>
           <circle cx="13" cy="13" r="11"></circle>
-          <path class="lightbox-close-icon"
-            d="M17.764 16.62l-1.144 1.144c-.158.157-.348.236-.573.236-.224 0-.415-.08-.572-.236L13 15.29l-2.475 2.474c-.157.157-.348.236-.572.236-.225 0-.415-.08-.573-.236L8.236 16.62C8.08 16.462 8 16.272 8 16.047c0-.224.08-.415.236-.572L10.71 13l-2.474-2.475C8.08 10.368 8 10.177 8 9.953c0-.225.08-.415.236-.573L9.38 8.236C9.538 8.08 9.728 8 9.953 8c.224 0 .415.08.572.236L13 10.71l2.475-2.474c.157-.157.348-.236.572-.236.225 0 .415.08.573.236l1.144 1.144c.157.158.236.348.236.573 0 .224-.08.415-.236.572L15.29 13l2.474 2.475c.157.157.236.348.236.572 0 .225-.08.415-.236.573z">
-          </path>
+          <path
+            class="lightbox-close-icon"
+            d="M17.764 16.62l-1.144 1.144c-.158.157-.348.236-.573.236-.224 0-.415-.08-.572-.236L13 15.29l-2.475 2.474c-.157.157-.348.236-.572.236-.225 0-.415-.08-.573-.236L8.236 16.62C8.08 16.462 8 16.272 8 16.047c0-.224.08-.415.236-.572L10.71 13l-2.474-2.475C8.08 10.368 8 10.177 8 9.953c0-.225.08-.415.236-.573L9.38 8.236C9.538 8.08 9.728 8 9.953 8c.224 0 .415.08.572.236L13 10.71l2.475-2.474c.157-.157.348-.236.572-.236.225 0 .415.08.573.236l1.144 1.144c.157.158.236.348.236.573 0 .224-.08.415-.236.572L15.29 13l2.474 2.475c.157.157.236.348.236.572 0 .225-.08.415-.236.573z"
+          ></path>
         </svg>
       </button>
       <div class="modal-body">
         <div class="ucla-popup-img-container">
-          <img src="https://v.fastcdn.co/u/23b46e4b/63517106-0-Prosper-Benhaim-MD--.jpeg" alt="Prosper Benhaim, MD">
+          <img
+            src="https://v.fastcdn.co/u/23b46e4b/63517106-0-Prosper-Benhaim-MD--.jpeg"
+            alt="Prosper Benhaim, MD"
+          />
         </div>
         <div class="ucla-popup-text-container">
           <h1 class="ucla-popup-title">Prosper Benhaim, MD</h1>
           <h2 class="ucla-popup-subtitle">تشوه اليد المعقد - جراحة اليد</h2>
           <p>
-            <span>بروسبر بنهايم هو جراح يد وجراح مجهرية وجراح تجميل ترميمي في كلية الطب بجامعة كاليفورنيا منذ انضمامه إلى قسم جراحة العظام وقسم الجراحة التجميلية والترميمية في عام 1998.</span>
-            <span>وهو حاليًا أستاذ مشارك ورئيس قسم جراحة اليد في المراكز الطبية UCLA و <span class="whitespace-nowrap">Olive View-UCLA</span>. لديه العديد من المناصب في اللجان المحلية والوطنية ، بما في ذلك منصب تحريري لمجلة الجمعية الأمريكية لجراحة اليد.</span>
+            <span
+              >بروسبر بنهايم هو جراح يد وجراح مجهرية وجراح تجميل ترميمي في كلية
+              الطب بجامعة كاليفورنيا منذ انضمامه إلى قسم جراحة العظام وقسم
+              الجراحة التجميلية والترميمية في عام 1998.</span
+            >
+            <span
+              >وهو حاليًا أستاذ مشارك ورئيس قسم جراحة اليد في المراكز الطبية
+              UCLA و <span class="whitespace-nowrap">Olive View-UCLA</span>.
+              لديه العديد من المناصب في اللجان المحلية والوطنية ، بما في ذلك
+              منصب تحريري لمجلة الجمعية الأمريكية لجراحة اليد.</span
+            >
           </p>
         </div>
       </div>
       <div class="modal-footer">
         <a
           href="tel:3102133337"
-          class="url-link btn btn-shadow item-block" target="_blank"
+          class="url-link btn btn-shadow item-block"
+          target="_blank"
         >
           اتصل بنا 3337-213 (310)
         </a>
         <a
-          href="https://uclahs.az1.qualtrics.com/jfe/form/SV_d13P9YvXEn8MPEq?Q_Language=AR&utm_source=facebook_paid&utm_medium=paid_social&utm_campaign=orthopedic_mena_patient"
-          class="url-link btn btn-shadow item-block" target="_blank">
+          href="https://uclahs.az1.qualtrics.com/jfe/form/SV_cwCJpClWLtZTMGi?Q_Language=AR&utm_source=linkedin_paid&utm_medium=display&utm_campaign=orthopedic_mena_hcp"
+          class="url-link btn btn-shadow item-block"
+          target="_blank"
+        >
           حدد موعدًا
         </a>
       </div>
@@ -1212,37 +1719,58 @@ function loadScript(url, callback) {
 <div id="modal-wessel" class="ucla-popup lightbox item-cover">
   <div class="lightbox-dim">
     <div class="lightbox-content">
-      <button class="lightbox-close lightbox-close-btn item-cover item-absolute" aria-label="Close dialog">
-        <svg xmlns="http://www.w3.org/2000/svg" height="26" width="26" class="lightbox-btn-svg">
+      <button
+        class="lightbox-close lightbox-close-btn item-cover item-absolute"
+        aria-label="Close dialog"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="26"
+          width="26"
+          class="lightbox-btn-svg"
+        >
           <circle class="lightbox-close-icon" cx="13" cy="13" r="13"></circle>
           <circle cx="13" cy="13" r="11"></circle>
-          <path class="lightbox-close-icon"
-            d="M17.764 16.62l-1.144 1.144c-.158.157-.348.236-.573.236-.224 0-.415-.08-.572-.236L13 15.29l-2.475 2.474c-.157.157-.348.236-.572.236-.225 0-.415-.08-.573-.236L8.236 16.62C8.08 16.462 8 16.272 8 16.047c0-.224.08-.415.236-.572L10.71 13l-2.474-2.475C8.08 10.368 8 10.177 8 9.953c0-.225.08-.415.236-.573L9.38 8.236C9.538 8.08 9.728 8 9.953 8c.224 0 .415.08.572.236L13 10.71l2.475-2.474c.157-.157.348-.236.572-.236.225 0 .415.08.573.236l1.144 1.144c.157.158.236.348.236.573 0 .224-.08.415-.236.572L15.29 13l2.474 2.475c.157.157.236.348.236.572 0 .225-.08.415-.236.573z">
-          </path>
+          <path
+            class="lightbox-close-icon"
+            d="M17.764 16.62l-1.144 1.144c-.158.157-.348.236-.573.236-.224 0-.415-.08-.572-.236L13 15.29l-2.475 2.474c-.157.157-.348.236-.572.236-.225 0-.415-.08-.573-.236L8.236 16.62C8.08 16.462 8 16.272 8 16.047c0-.224.08-.415.236-.572L10.71 13l-2.474-2.475C8.08 10.368 8 10.177 8 9.953c0-.225.08-.415.236-.573L9.38 8.236C9.538 8.08 9.728 8 9.953 8c.224 0 .415.08.572.236L13 10.71l2.475-2.474c.157-.157.348-.236.572-.236.225 0 .415.08.573.236l1.144 1.144c.157.158.236.348.236.573 0 .224-.08.415-.236.572L15.29 13l2.474 2.475c.157.157.236.348.236.572 0 .225-.08.415-.236.573z"
+          ></path>
         </svg>
       </button>
       <div class="modal-body">
         <div class="ucla-popup-img-container">
-          <img src="https://v.fastcdn.co/u/23b46e4b/63517096-0-Lauren-E.-Wessel-MD-.jpeg" alt="Lauren E. Wessel, MD">
+          <img
+            src="https://v.fastcdn.co/u/23b46e4b/63517096-0-Lauren-E.-Wessel-MD-.jpeg"
+            alt="Lauren E. Wessel, MD"
+          />
         </div>
         <div class="ucla-popup-text-container">
           <h1 class="ucla-popup-title">Lauren E. Wessel, MD</h1>
           <h2 class="ucla-popup-subtitle">تشوه اليد المعقد - جراحة اليد</h2>
           <p>
-            تم تدريب الدكتورة لورين إي فيسيل على جراحة اليد والطرف العلوي مع تدريب إضافي في طب أورام العظام. تعمل مع حالات جراحة عظام اليد وتطلع على مجموعة كاملة من أمراض الأطراف العلوية ، بما في ذلك الصدمات والإصابات الرياضية والتهاب المفاصل ومشاكل الأعصاب الطرفية وحالات الأوعية الدموية مع قاعدة معرفية متخصصة لعلاج أورام الأطراف العلوية. لديها اهتمام إضافي بإعادة الإعمار بعد البتر ، باستخدام تقنيات مثل إعادة تعصيب العضلات المستهدفة وتجديد واجهات الأعصاب الطرفية.
+            تم تدريب الدكتورة لورين إي فيسيل على جراحة اليد والطرف العلوي مع
+            تدريب إضافي في طب أورام العظام. تعمل مع حالات جراحة عظام اليد وتطلع
+            على مجموعة كاملة من أمراض الأطراف العلوية ، بما في ذلك الصدمات
+            والإصابات الرياضية والتهاب المفاصل ومشاكل الأعصاب الطرفية وحالات
+            الأوعية الدموية مع قاعدة معرفية متخصصة لعلاج أورام الأطراف العلوية.
+            لديها اهتمام إضافي بإعادة الإعمار بعد البتر ، باستخدام تقنيات مثل
+            إعادة تعصيب العضلات المستهدفة وتجديد واجهات الأعصاب الطرفية.
           </p>
         </div>
       </div>
       <div class="modal-footer">
         <a
           href="tel:3102133337"
-          class="url-link btn btn-shadow item-block" target="_blank"
+          class="url-link btn btn-shadow item-block"
+          target="_blank"
         >
           اتصل بنا 3337-213 (310)
         </a>
         <a
-          href="https://uclahs.az1.qualtrics.com/jfe/form/SV_d13P9YvXEn8MPEq?Q_Language=AR&utm_source=facebook_paid&utm_medium=paid_social&utm_campaign=orthopedic_mena_patient"
-          class="url-link btn btn-shadow item-block" target="_blank">
+          href="https://uclahs.az1.qualtrics.com/jfe/form/SV_cwCJpClWLtZTMGi?Q_Language=AR&utm_source=linkedin_paid&utm_medium=display&utm_campaign=orthopedic_mena_hcp"
+          class="url-link btn btn-shadow item-block"
+          target="_blank"
+        >
           حدد موعدًا
         </a>
       </div>
@@ -1253,35 +1781,49 @@ function loadScript(url, callback) {
 <div id="modal-meals" class="ucla-popup lightbox item-cover">
   <div class="lightbox-dim">
     <div class="lightbox-content">
-      <button class="lightbox-close lightbox-close-btn item-cover item-absolute" aria-label="Close dialog">
-        <svg xmlns="http://www.w3.org/2000/svg" height="26" width="26" class="lightbox-btn-svg">
+      <button
+        class="lightbox-close lightbox-close-btn item-cover item-absolute"
+        aria-label="Close dialog"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="26"
+          width="26"
+          class="lightbox-btn-svg"
+        >
           <circle class="lightbox-close-icon" cx="13" cy="13" r="13"></circle>
           <circle cx="13" cy="13" r="11"></circle>
-          <path class="lightbox-close-icon"
-            d="M17.764 16.62l-1.144 1.144c-.158.157-.348.236-.573.236-.224 0-.415-.08-.572-.236L13 15.29l-2.475 2.474c-.157.157-.348.236-.572.236-.225 0-.415-.08-.573-.236L8.236 16.62C8.08 16.462 8 16.272 8 16.047c0-.224.08-.415.236-.572L10.71 13l-2.474-2.475C8.08 10.368 8 10.177 8 9.953c0-.225.08-.415.236-.573L9.38 8.236C9.538 8.08 9.728 8 9.953 8c.224 0 .415.08.572.236L13 10.71l2.475-2.474c.157-.157.348-.236.572-.236.225 0 .415.08.573.236l1.144 1.144c.157.158.236.348.236.573 0 .224-.08.415-.236.572L15.29 13l2.474 2.475c.157.157.236.348.236.572 0 .225-.08.415-.236.573z">
-          </path>
+          <path
+            class="lightbox-close-icon"
+            d="M17.764 16.62l-1.144 1.144c-.158.157-.348.236-.573.236-.224 0-.415-.08-.572-.236L13 15.29l-2.475 2.474c-.157.157-.348.236-.572.236-.225 0-.415-.08-.573-.236L8.236 16.62C8.08 16.462 8 16.272 8 16.047c0-.224.08-.415.236-.572L10.71 13l-2.474-2.475C8.08 10.368 8 10.177 8 9.953c0-.225.08-.415.236-.573L9.38 8.236C9.538 8.08 9.728 8 9.953 8c.224 0 .415.08.572.236L13 10.71l2.475-2.474c.157-.157.348-.236.572-.236.225 0 .415.08.573.236l1.144 1.144c.157.158.236.348.236.573 0 .224-.08.415-.236.572L15.29 13l2.474 2.475c.157.157.236.348.236.572 0 .225-.08.415-.236.573z"
+          ></path>
         </svg>
       </button>
       <div class="modal-body">
         <div class="ucla-popup-img-container">
-          <img src="https://v.fastcdn.co/u/23b46e4b/63611929-0-Roy-A.-Meals-MD-240x.jpg" alt="Roy A. Meals, MD">
+          <img
+            src="https://v.fastcdn.co/u/23b46e4b/63611929-0-Roy-A.-Meals-MD-240x.jpg"
+            alt="Roy A. Meals, MD"
+          />
         </div>
         <div class="ucla-popup-text-container">
           <h1 class="ucla-popup-title">Roy A. Meals, MD</h1>
-          <h2 class="ucla-popup-subtitle">
-            تشوه اليد المعقد - جراحة اليد
-          </h2>
+          <h2 class="ucla-popup-subtitle">تشوه اليد المعقد - جراحة اليد</h2>
           <p>
-            <span style="font-weight: 700; margin-bottom: 5px;">تعليم</span>
+            <span style="font-weight: 700; margin-bottom: 5px">تعليم</span>
             <span>شهادة البورد الطبي</span>
-            <span style="margin-bottom: 5px;">جراحة العظام ، البورد الأمريكي لجراحة العظام ، 1980</span>
+            <span style="margin-bottom: 5px"
+              >جراحة العظام ، البورد الأمريكي لجراحة العظام ، 1980</span
+            >
             <span>الزمالة</span>
-            <span style="margin-bottom: 5px;">كلية الطب بجامعة هارفارد / مستشفى ماساتشوستس العام ، 1979</span>
+            <span style="margin-bottom: 5px"
+              >كلية الطب بجامعة هارفارد / مستشفى ماساتشوستس العام ، 1979</span
+            >
             <span>مساكن</span>
             <span>مستشفى جونز هوبكنز 1978</span>
-            <span style="margin-bottom: 5px;">مستشفى جونز هوبكنز ، 1973</span>
+            <span style="margin-bottom: 5px">مستشفى جونز هوبكنز ، 1973</span>
             <span>التدريب الداخلي</span>
-            <span style="margin-bottom: 5px;">مستشفى جونز هوبكنز ، 1972</span>
+            <span style="margin-bottom: 5px">مستشفى جونز هوبكنز ، 1972</span>
             <span>درجة</span>
             <span>كلية الطب بجامعة فاندربيلت ، دكتوراه في الطب ، 1971</span>
           </p>
@@ -1290,13 +1832,16 @@ function loadScript(url, callback) {
       <div class="modal-footer">
         <a
           href="tel:3102133337"
-          class="url-link btn btn-shadow item-block" target="_blank"
+          class="url-link btn btn-shadow item-block"
+          target="_blank"
         >
           اتصل بنا 3337-213 (310)
         </a>
         <a
-          href="https://uclahs.az1.qualtrics.com/jfe/form/SV_d13P9YvXEn8MPEq?Q_Language=AR&utm_source=facebook_paid&utm_medium=paid_social&utm_campaign=orthopedic_mena_patient"
-          class="url-link btn btn-shadow item-block" target="_blank">
+          href="https://uclahs.az1.qualtrics.com/jfe/form/SV_cwCJpClWLtZTMGi?Q_Language=AR&utm_source=linkedin_paid&utm_medium=display&utm_campaign=orthopedic_mena_hcp"
+          class="url-link btn btn-shadow item-block"
+          target="_blank"
+        >
           حدد موعدًا
         </a>
       </div>
@@ -1307,54 +1852,78 @@ function loadScript(url, callback) {
 <div id="modal-lawrence" class="ucla-popup lightbox item-cover">
   <div class="lightbox-dim">
     <div class="lightbox-content">
-      <button class="lightbox-close lightbox-close-btn item-cover item-absolute" aria-label="Close dialog">
-        <svg xmlns="http://www.w3.org/2000/svg" height="26" width="26" class="lightbox-btn-svg">
+      <button
+        class="lightbox-close lightbox-close-btn item-cover item-absolute"
+        aria-label="Close dialog"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="26"
+          width="26"
+          class="lightbox-btn-svg"
+        >
           <circle class="lightbox-close-icon" cx="13" cy="13" r="13"></circle>
           <circle cx="13" cy="13" r="11"></circle>
-          <path class="lightbox-close-icon"
-            d="M17.764 16.62l-1.144 1.144c-.158.157-.348.236-.573.236-.224 0-.415-.08-.572-.236L13 15.29l-2.475 2.474c-.157.157-.348.236-.572.236-.225 0-.415-.08-.573-.236L8.236 16.62C8.08 16.462 8 16.272 8 16.047c0-.224.08-.415.236-.572L10.71 13l-2.474-2.475C8.08 10.368 8 10.177 8 9.953c0-.225.08-.415.236-.573L9.38 8.236C9.538 8.08 9.728 8 9.953 8c.224 0 .415.08.572.236L13 10.71l2.475-2.474c.157-.157.348-.236.572-.236.225 0 .415.08.573.236l1.144 1.144c.157.158.236.348.236.573 0 .224-.08.415-.236.572L15.29 13l2.474 2.475c.157.157.236.348.236.572 0 .225-.08.415-.236.573z">
-          </path>
-        </svg>
-      </button><!-- end .lightbox-close -->
+          <path
+            class="lightbox-close-icon"
+            d="M17.764 16.62l-1.144 1.144c-.158.157-.348.236-.573.236-.224 0-.415-.08-.572-.236L13 15.29l-2.475 2.474c-.157.157-.348.236-.572.236-.225 0-.415-.08-.573-.236L8.236 16.62C8.08 16.462 8 16.272 8 16.047c0-.224.08-.415.236-.572L10.71 13l-2.474-2.475C8.08 10.368 8 10.177 8 9.953c0-.225.08-.415.236-.573L9.38 8.236C9.538 8.08 9.728 8 9.953 8c.224 0 .415.08.572.236L13 10.71l2.475-2.474c.157-.157.348-.236.572-.236.225 0 .415.08.573.236l1.144 1.144c.157.158.236.348.236.573 0 .224-.08.415-.236.572L15.29 13l2.474 2.475c.157.157.236.348.236.572 0 .225-.08.415-.236.573z"
+          ></path>
+        </svg></button
+      ><!-- end .lightbox-close -->
       <div class="modal-body">
         <div class="ucla-popup-img-container">
-          <img src="https://v.fastcdn.co/u/23b46e4b/63611927-0-John-F.-Lawrence-MD-.jpg" alt="John F. Lawrence, MD">
+          <img
+            src="https://v.fastcdn.co/u/23b46e4b/63611927-0-John-F.-Lawrence-MD-.jpg"
+            alt="John F. Lawrence, MD"
+          />
         </div>
         <div class="ucla-popup-text-container">
           <h1 class="ucla-popup-title">John F. Lawrence, MD</h1>
-          <h2 class="ucla-popup-subtitle">
-            تشوه اليد المعقد - جراحة اليد
-          </h2>
+          <h2 class="ucla-popup-subtitle">تشوه اليد المعقد - جراحة اليد</h2>
           <p>
-            <span style="font-weight: 700; margin-bottom: 5px;">تعليم</span>
+            <span style="font-weight: 700; margin-bottom: 5px">تعليم</span>
             <span>شهادة البورد الطبي</span>
-            <span style="margin-bottom: 5px;">جراحة العظام ، البورد الأمريكي لجراحة العظام ، 1969</span>
+            <span style="margin-bottom: 5px"
+              >جراحة العظام ، البورد الأمريكي لجراحة العظام ، 1969</span
+            >
             <span>الزمالة</span>
-            <span style="margin-bottom: 5px;">مستشفى العظام 1967</span>
+            <span style="margin-bottom: 5px">مستشفى العظام 1967</span>
             <span>مساكن</span>
             <span>كلية الطب بجامعة كاليفورنيا في لوس أنجلوس ، 1967</span>
-            <span style="margin-bottom: 5px;">كلية الطب بجامعة كاليفورنيا ، 1966</span>
+            <span style="margin-bottom: 5px"
+              >كلية الطب بجامعة كاليفورنيا ، 1966</span
+            >
             <span>التدريب الداخلي</span>
-            <span style="margin-bottom: 5px;">نظام الرعاية الصحية في لوس أنجلوس الكبرى ، VA ، 1963</span>
+            <span style="margin-bottom: 5px"
+              >نظام الرعاية الصحية في لوس أنجلوس الكبرى ، VA ، 1963</span
+            >
             <span>درجة</span>
             <span>كلية الطب وطب الأسنان بجامعة روتشستر ، 1962</span>
           </p>
         </div>
-      </div><!-- end .modal-body -->
+      </div>
+      <!-- end .modal-body -->
       <div class="modal-footer">
         <a
           href="tel:3102133337"
-          class="url-link btn btn-shadow item-block" target="_blank"
+          class="url-link btn btn-shadow item-block"
+          target="_blank"
         >
           اتصل بنا 3337-213 (310)
         </a>
         <a
-          href="https://uclahs.az1.qualtrics.com/jfe/form/SV_d13P9YvXEn8MPEq?Q_Language=AR&utm_source=facebook_paid&utm_medium=paid_social&utm_campaign=orthopedic_mena_patient"
-          class="url-link btn btn-shadow item-block" target="_blank">
+          href="https://uclahs.az1.qualtrics.com/jfe/form/SV_cwCJpClWLtZTMGi?Q_Language=AR&utm_source=linkedin_paid&utm_medium=display&utm_campaign=orthopedic_mena_hcp"
+          class="url-link btn btn-shadow item-block"
+          target="_blank"
+        >
           حدد موعدًا
         </a>
-      </div> <!-- end .modal-footer -->
-    </div> <!-- end lightbox-content -->
-  </div> <!-- end .lightbox-dim -->
-</div><!-- end .ucla-popup -->
+      </div>
+      <!-- end .modal-footer -->
+    </div>
+    <!-- end lightbox-content -->
+  </div>
+  <!-- end .lightbox-dim -->
+</div>
+<!-- end .ucla-popup -->
 <!-- End Modals -->

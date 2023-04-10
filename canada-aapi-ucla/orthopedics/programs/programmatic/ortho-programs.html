@@ -1,432 +1,452 @@
 <style>
-.section-front {
-  z-index: 999;
-}
+  .section-front {
+    z-index: 999;
+  }
 
-.slider-container {
-   position: relative;
-}
+  .slider-container {
+    position: relative;
+  }
 
-.slider1.programs .slide {
-  width: 16.563rem;
-  margin: 0.313rem;
-}
+  .slider1.programs .slide {
+    width: 16.563rem;
+    margin: 0.313rem;
+  }
 
-.slider1.programs .card {
-  height: 504px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  font-size: 0.75rem;
-  font-family: "trade-gothic-next", "trade-gothic-next-1", "trade-gothic-next-2", "trade-gothic-next-web", "trade-gothic-next-web-1", "trade-gothic-next-web-2";
-  -webkit-box-shadow: rgb(93 93 93 / 25%) 2px 0 4px 0;
-          box-shadow: rgb(93 93 93 / 25%) 2px 0 4px 0;
-}
+  .slider1.programs .card {
+    height: 504px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    font-family: "trade-gothic-next", "trade-gothic-next-1",
+      "trade-gothic-next-2", "trade-gothic-next-web", "trade-gothic-next-web-1",
+      "trade-gothic-next-web-2";
+    -webkit-box-shadow: rgb(93 93 93 / 25%) 2px 0 4px 0;
+    box-shadow: rgb(93 93 93 / 25%) 2px 0 4px 0;
+  }
 
-.slider1.programs .slide img {
-  width: 100%;
-}
+  .slider1.programs .slide img {
+    width: 100%;
+  }
 
-.slider1.programs .slide-title {
-  flex: 1;
-  margin: 0.75rem 0 0.313rem;
-  color: #2774AE;
-  font-weight: 700;
-}
+  .slider1.programs .slide-title {
+    flex: 1;
+    margin: 0.75rem 0 0.313rem;
+    color: #2774ae;
+    font-weight: 700;
+  }
 
-.slider1.programs .slide-title + p {
-  margin-bottom: 0.938rem;
-}
+  .slider1.programs .slide-title + p {
+    margin-bottom: 0.938rem;
+  }
 
-.slider1.programs .small-image {
-  flex: 0;
-  margin-top: 1.5rem;
-  margin-left: 4.5rem;
-  margin-right: 4.5rem;
-}
+  .slider1.programs .small-image {
+    flex: 0;
+    margin-top: 1.5rem;
+    margin-left: 4.5rem;
+    margin-right: 4.5rem;
+  }
 
-.slider1.programs .small-text {
-  flex: 8;
-  margin:0px 10px;
-  height:150px;
-}
+  .slider1.programs .small-text {
+    flex: 8;
+    margin: 0px 10px;
+    height: 150px;
+  }
 
-.slider1.programs .slide-btn-yellow {
-  display: block;
-  padding: 1rem 0;
-  background: #FFC72C;
-  color: #053D5B;
-  font-size: 0.8669rem;
-  line-height: 0.8669rem;
-  font-weight: 700;
-  flex-basis: 40px;
-}
+  .slider1.programs .slide-btn-yellow {
+    display: block;
+    padding: 1rem 0;
+    background: #ffc72c;
+    color: #053d5b;
+    font-size: 0.8669rem;
+    line-height: 0.8669rem;
+    font-weight: 700;
+    flex-basis: 40px;
+  }
 
-.slider1.programs .slide-btn-blue {
-  display: block;
-  padding: 1rem 0;
-  background: #2775AD;
-  color: #FFFFFF;
-  font-size: 0.8669rem;
-  line-height: 0.8669rem;
-  font-weight: 700;
-  flex-basis: 40px;
-}
+  .slider1.programs .slide-btn-blue {
+    display: block;
+    padding: 1rem 0;
+    background: #2775ad;
+    color: #ffffff;
+    font-size: 0.8669rem;
+    line-height: 0.8669rem;
+    font-weight: 700;
+    flex-basis: 40px;
+  }
 
-.slick-dots {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 0;
-  padding: 0.938rem 0;
-  list-style-type: none;
-}
+  .slick-dots {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0.938rem 0;
+    list-style-type: none;
+  }
 
-.slick-dots li {
-  margin: 0 3px;
-}
+  .slick-dots li {
+    margin: 0 3px;
+  }
 
-.slick-dots button {
-  display: block;
-  width: 10px;
-  height: 10px;
-  padding: 0;
-  border: 1px solid #2774AE;
-  border-radius: 100%;
-  background-color: #FFFFFF;
-  text-indent: -9999px;
-}
+  .slick-dots button {
+    display: block;
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border: 1px solid #2774ae;
+    border-radius: 100%;
+    background-color: #ffffff;
+    text-indent: -9999px;
+  }
 
-.slick-dots li.slick-active button {
-  background-color: #2774AE;
-}
+  .slick-dots li.slick-active button {
+    background-color: #2774ae;
+  }
 
-.slider-arrow {
-  width: 1.3125rem;
-  height: 2.1875rem;
-  display: inline-block;
-  background-size: contain;
-}
+  .slider-arrow {
+    width: 1.3125rem;
+    height: 2.1875rem;
+    display: inline-block;
+    background-size: contain;
+  }
 
-.slider-arrow.next1{
-  background: url('https://v.fastcdn.co/u/23b46e4b/56445012-0-slider-right-blue.png') no-repeat;
-  background-size: contain;
-  position: absolute;
-  top: 35%;
-  right: -3.125rem;
-}
+  .slider-arrow.next1 {
+    background: url("https://v.fastcdn.co/u/23b46e4b/56445012-0-slider-right-blue.png")
+      no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 35%;
+    right: -3.125rem;
+  }
 
-.slider-arrow.prev1 {
-  background: url('https://v.fastcdn.co/u/23b46e4b/56445007-0-slider-left-blue.png') no-repeat;
-  background-size: contain;
-  position: absolute;
-  top: 35%;
-  left: -3.125rem;
-}
+  .slider-arrow.prev1 {
+    background: url("https://v.fastcdn.co/u/23b46e4b/56445007-0-slider-left-blue.png")
+      no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 35%;
+    left: -3.125rem;
+  }
 
-/* custom modal style */
-.lightbox {
+  /* custom modal style */
+  .lightbox {
     display: none;
     position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-}
+  }
 
-.item-cover {
+  .item-cover {
     z-index: 1000030;
-}
+  }
 
-.lightbox-dim {
-    background: rgba(0,0,0,0.85);
+  .lightbox-dim {
+    background: rgba(0, 0, 0, 0.85);
     height: 100%;
-    animation: fade-in .5s ease-in-out;
+    animation: fade-in 0.5s ease-in-out;
     overflow-x: hidden;
     display: flex;
     align-items: center;
     padding: 30px 0;
-}
+  }
 
-.lightbox-content {
+  .lightbox-content {
     background-color: #fefefe;
     border-radius: 3px;
     position: relative;
     margin: auto;
-    animation: slide-down .5s ease-in-out;
-}
+    animation: slide-down 0.5s ease-in-out;
+  }
 
-.lightbox-content {
-  width: 23.75rem;
-}
+  .lightbox-content {
+    width: 23.75rem;
+  }
 
-.lightbox-close {
+  .lightbox-close {
     width: 26px;
     right: 0;
     top: -10px;
     cursor: pointer;
-}
+  }
 
-.lightbox-close-btn {
+  .lightbox-close-btn {
     padding: 0;
     border: none;
     background: none;
-}
+  }
 
-.lightbox-btn-svg {
+  .lightbox-btn-svg {
     display: block;
-}
+  }
 
-.lightbox-close-icon {
+  .lightbox-close-icon {
     fill: #fff;
-}
+  }
 
-.modal-body {
-  padding: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.modal-footer {
-  padding: 0 2rem 2rem;
-}
-
-.ucla-popup-img-container {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  width: 13.9375rem;
-}
-
-.ucla-popup-img-container img {
-  width: 100%;
-  -webkit-box-shadow: rgb(93 93 93 / 25%) 2px 0 4px 0;
-          box-shadow: rgb(93 93 93 / 25%) 2px 0 4px 0;
-}
-
-.ucla-popup-text-container {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.ucla-popup-title {
-  margin: 0.313rem 0;
-  font-family: "p22-mackinac-pro-1","p22-mackinac-pro-2",serif;
-  font-size: 1.2384rem;
-  color: #2774ae;
-  line-height: 1.75rem;
-  font-weight: 500;
-}
-
-.ucla-popup-subtitle {
-  margin-bottom: 1rem;
-  font-size: 0.9907rem;
-  color: #003b5c;
-  line-height: 1.375rem;
-}
-
-.ucla-popup-text-container p {
-  line-height: 1.25rem;
-  font-size: 0.8669rem;
-  color: #010101;
-}
-
-.ucla-popup .btn {
-  display: block;
-  padding: 1rem;
-  border-radius: 5px;
-  background: #FFC72C;
-  color: #003B5C;
-  font-size: 0.9907rem;
-  font-weight: 600;
-}
-
-.ucla-popup .btn:nth-child(1) {
-  margin-bottom: 1rem;
-}
-
-@media screen and (min-width:768px) {
   .modal-body {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    padding: 2.5rem 2.3rem 2.3rem;
-  }
-
-  .lightbox-content {
-    width: 47.375rem;
-  }
-
-  .ucla-popup-img-container {
-    max-width: 100%;
-  }
-
-  .ucla-popup-text-container {
-    -webkit-box-flex: 2;
-        -ms-flex: 2;
-            flex: 2;
-    margin-left: 1.5rem;
-    text-align: left;
-  }
-
-  .ucla-popup-title {
-    margin: 0;
-    font-size: 1.4861rem;
-    line-height: 2.375rem;
-  }
-
-  .ucla-popup-subtitle {
-    line-height: 1.625rem;
-  }
-
-  .ucla-popup-text-container p {
-    line-height: 1.375rem;
-  }
-
-  .modal-footer {
+    padding: 2rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .modal-footer {
+    padding: 0 2rem 2rem;
+  }
+
+  .ucla-popup-img-container {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    width: 13.9375rem;
+  }
+
+  .ucla-popup-img-container img {
+    width: 100%;
+    -webkit-box-shadow: rgb(93 93 93 / 25%) 2px 0 4px 0;
+    box-shadow: rgb(93 93 93 / 25%) 2px 0 4px 0;
+  }
+
+  .ucla-popup-text-container {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+
+  .ucla-popup-title {
+    margin: 0.313rem 0;
+    font-family: "p22-mackinac-pro-1", "p22-mackinac-pro-2", serif;
+    font-size: 1.2384rem;
+    color: #2774ae;
+    line-height: 1.75rem;
+    font-weight: 500;
+  }
+
+  .ucla-popup-subtitle {
+    margin-bottom: 1rem;
+    font-size: 0.9907rem;
+    color: #003b5c;
+    line-height: 1.375rem;
+  }
+
+  .ucla-popup-text-container p {
+    line-height: 1.25rem;
+    font-size: 0.8669rem;
+    color: #010101;
   }
 
   .ucla-popup .btn {
-    width: 21rem;
-    display: inline-block;
+    display: block;
+    padding: 1rem;
+    border-radius: 5px;
+    background: #ffc72c;
+    color: #003b5c;
+    font-size: 0.9907rem;
+    font-weight: 600;
   }
 
   .ucla-popup .btn:nth-child(1) {
-    margin-bottom: 0;
-  }
-}
-
-</style>
-<script>
-'use strict';
-function loadScript(url, callback) {
-
-  var script = document.createElement("script")
-  script.type = "text/javascript";
-
-  if (script.readyState) { //IE
-    script.onreadystatechange = function () {
-      if (script.readyState === "loaded" || script.readyState === "complete") {
-        script.onreadystatechange = null;
-        callback();
-      }
-    };
-  } else { //Others
-    script.onload = function () {
-      callback();
-    };
+    margin-bottom: 1rem;
   }
 
-  script.src = url;
-  document.getElementsByTagName("head")[0].appendChild(script);
-}
-
-(function () {
-  if (typeof jQuery === 'undefined') {
-    loadScript("//code.jquery.com/jquery-3.5.0.min.js", function () {
-
-      //jQuery loaded
-      console.log('jquery loaded');
-      loadScript("//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js", function () {
-        //slick loaded
-        afterJquery();
-
-      });
-
-    });
-  } else {
-    loadScript("//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js", function () {
-      //slick loaded
-      afterJquery();
-
-    });
-  }
-
-  function afterJquery() {
-    $('.slider-container').closest('.section').addClass('section-front');
-    let modalOpenBtns;
-    const modals = document.querySelectorAll('.ucla-popup');
-
-    function initModalBtns() {
-      modalOpenBtns = document.querySelectorAll('.modal-open-btn');
-
-      modalOpenBtns.forEach(btn => {
-        btn.addEventListener('click', e => {
-          let modalId = btn.dataset.modalId;
-          let modal = document.getElementById(modalId);
-          modal.style.display = "block";
-        });
-      });
+  @media screen and (min-width: 768px) {
+    .modal-body {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      padding: 2.5rem 2.3rem 2.3rem;
     }
 
-    modals.forEach(modal => {
-      let closeBtn = modal.getElementsByClassName("lightbox-close-btn")[0];
-      let innerModal = modal.getElementsByClassName("lightbox-dim")[0];
-      closeBtn.addEventListener('click', e => {
-        e.stopPropagation();
-        modal.style.display = "none";
-      });
-      innerModal.addEventListener('click', e => {
-        e.stopPropagation();
-        if (e.target === innerModal) {
-          modal.style.display = "none";
-        }
-      });
-    });
+    .lightbox-content {
+      width: 47.375rem;
+    }
 
-    $('.slider1.programs').on('init', function (event, slick) {
-      initModalBtns();
-    });
+    .ucla-popup-img-container {
+      max-width: 100%;
+    }
 
-    $('.slider1.programs').slick({
-      dots: true,
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      variableWidth: true,
-      arrows: true,
-      prevArrow: $('.prev1'),
-      nextArrow: $('.next1')
-    });
+    .ucla-popup-text-container {
+      -webkit-box-flex: 2;
+      -ms-flex: 2;
+      flex: 2;
+      margin-left: 1.5rem;
+      text-align: left;
+    }
+
+    .ucla-popup-title {
+      margin: 0;
+      font-size: 1.4861rem;
+      line-height: 2.375rem;
+    }
+
+    .ucla-popup-subtitle {
+      line-height: 1.625rem;
+    }
+
+    .ucla-popup-text-container p {
+      line-height: 1.375rem;
+    }
+
+    .modal-footer {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+    }
+
+    .ucla-popup .btn {
+      width: 21rem;
+      display: inline-block;
+    }
+
+    .ucla-popup .btn:nth-child(1) {
+      margin-bottom: 0;
+    }
   }
-})();
+</style>
+<script>
+  "use strict";
+  function loadScript(url, callback) {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+
+    if (script.readyState) {
+      //IE
+      script.onreadystatechange = function () {
+        if (
+          script.readyState === "loaded" ||
+          script.readyState === "complete"
+        ) {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else {
+      //Others
+      script.onload = function () {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  }
+
+  (function () {
+    if (typeof jQuery === "undefined") {
+      loadScript("//code.jquery.com/jquery-3.5.0.min.js", function () {
+        //jQuery loaded
+        console.log("jquery loaded");
+        loadScript(
+          "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js",
+          function () {
+            //slick loaded
+            afterJquery();
+          }
+        );
+      });
+    } else {
+      loadScript(
+        "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js",
+        function () {
+          //slick loaded
+          afterJquery();
+        }
+      );
+    }
+
+    function afterJquery() {
+      $(".slider-container").closest(".section").addClass("section-front");
+      let modalOpenBtns;
+      const modals = document.querySelectorAll(".ucla-popup");
+
+      function initModalBtns() {
+        modalOpenBtns = document.querySelectorAll(".modal-open-btn");
+
+        modalOpenBtns.forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            let modalId = btn.dataset.modalId;
+            let modal = document.getElementById(modalId);
+            modal.style.display = "block";
+          });
+        });
+      }
+
+      modals.forEach((modal) => {
+        let closeBtn = modal.getElementsByClassName("lightbox-close-btn")[0];
+        let innerModal = modal.getElementsByClassName("lightbox-dim")[0];
+        closeBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          modal.style.display = "none";
+        });
+        innerModal.addEventListener("click", (e) => {
+          e.stopPropagation();
+          if (e.target === innerModal) {
+            modal.style.display = "none";
+          }
+        });
+      });
+
+      $(".slider1.programs").on("init", function (event, slick) {
+        initModalBtns();
+      });
+
+      $(".slider1.programs").slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        variableWidth: true,
+        arrows: true,
+        prevArrow: $(".prev1"),
+        nextArrow: $(".next1"),
+      });
+    }
+  })();
 </script>
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<link
+  rel="stylesheet"
+  href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+/>
 
 <div class="slider-container">
-
   <div class="slider1 programs">
-
     <div class="slide">
       <div class="card">
         <div class="small-image">
-            <img src="https://v.fastcdn.co/u/23b46e4b/63534990-0-Orthopedic-Oncology-.png" alt="Orthopedic Oncology">
+          <img
+            src="https://v.fastcdn.co/u/23b46e4b/63534990-0-Orthopedic-Oncology-.png"
+            alt="Orthopedic Oncology"
+          />
         </div>
         <p class="slide-title">Orthopedic Oncology</p>
         <p class="small-text">
-          Our orthopedic oncology team offers multispecialty, state-of-the-art care. We have been pioneers in techniques that remove tumors while preserving the limb. Our orthopedic oncology doctors perform the highest volume of surgery for bone and soft tissue tumors on the West Coast. UCLA Health specialists use a wide range of advanced techniques, including custom implants for particularly complex needs, targeted muscle reinnervation for phantom limb pain and expandable implants for limb-length equality.
+          Our orthopedic oncology team offers multispecialty, state-of-the-art
+          care. We have been pioneers in techniques that remove tumors while
+          preserving the limb. Our orthopedic oncology doctors perform the
+          highest volume of surgery for bone and soft tissue tumors on the West
+          Coast. UCLA Health specialists use a wide range of advanced
+          techniques, including custom implants for particularly complex needs,
+          targeted muscle reinnervation for phantom limb pain and expandable
+          implants for limb-length equality.
         </p>
         <a
           class="url-link popup-link btn item-block slide-btn-yellow modal-open-btn"
@@ -444,18 +464,32 @@ function loadScript(url, callback) {
         >
           Download PDF to Learn More
         </a>
-      </div> <!-- end .card -->
-    </div> <!-- end .slide -->
+      </div>
+      <!-- end .card -->
+    </div>
+    <!-- end .slide -->
 
     <div class="slide">
       <div class="card">
         <div class="small-image">
-          <img src="https://v.fastcdn.co/u/23b46e4b/63526999-0-Joint-Replacement-51.png" alt="Join Replacement & Joint Preservation Surgery">
+          <img
+            src="https://v.fastcdn.co/u/23b46e4b/63526999-0-Joint-Replacement-51.png"
+            alt="Join Replacement & Joint Preservation Surgery"
+          />
         </div>
-        <p class="slide-title">Joint Replacement & Joint Preservation Surgery</p>
+        <p class="slide-title">
+          Joint Replacement & Joint Preservation Surgery
+        </p>
         <p class="small-text">
-          Our orthopaedic surgeons are experts in all types of joint replacements. Our orthopaedic surgeons collaborate with anesthesiologists, nursing staff and physical therapists to facilitate faster recoveries with less postoperative pain.
-          In addition to offering every joint replacement option, our specialists are also experts in complex procedures and revision surgeries for failing implants. We educate each patient on all treatment options, helping them make informed decisions. Since we performed our first arthroplasty, we have been national leaders in joint surgery.
+          Our orthopaedic surgeons are experts in all types of joint
+          replacements. Our orthopaedic surgeons collaborate with
+          anesthesiologists, nursing staff and physical therapists to facilitate
+          faster recoveries with less postoperative pain. In addition to
+          offering every joint replacement option, our specialists are also
+          experts in complex procedures and revision surgeries for failing
+          implants. We educate each patient on all treatment options, helping
+          them make informed decisions. Since we performed our first
+          arthroplasty, we have been national leaders in joint surgery.
         </p>
         <a
           class="url-link popup-link btn item-block slide-btn-yellow modal-open-btn"
@@ -473,18 +507,29 @@ function loadScript(url, callback) {
         >
           Download PDF to Learn More
         </a>
-      </div> <!-- end .card -->
-    </div> <!-- end .slide -->
+      </div>
+      <!-- end .card -->
+    </div>
+    <!-- end .slide -->
 
     <div class="slide">
       <div class="card">
         <div class="small-image">
-          <img src="https://v.fastcdn.co/u/23b46e4b/63527001-0-Spine-disorders-512x.png" alt="Spine Disorders">
+          <img
+            src="https://v.fastcdn.co/u/23b46e4b/63527001-0-Spine-disorders-512x.png"
+            alt="Spine Disorders"
+          />
         </div>
         <p class="slide-title">Spine Disorders</p>
         <p class="small-text">
-          Our spine specialists deliver leading-edge treatments for spine injuries and disorders. UCLA Health orthopaedic experts were the first to discover how to use the body’s own natural proteins to speed healing and reduce pain after spine fusion surgery.
-          Our experienced surgeons use computers, detailed imaging and robotic technology to guide several spine surgeries. This technology allows us to perform complex surgical procedures with greater precision and better outcomes.
+          Our spine specialists deliver leading-edge treatments for spine
+          injuries and disorders. UCLA Health orthopaedic experts were the first
+          to discover how to use the body's own natural proteins to speed
+          healing and reduce pain after spine fusion surgery. Our experienced
+          surgeons use computers, detailed imaging and robotic technology to
+          guide several spine surgeries. This technology allows us to perform
+          complex surgical procedures with greater precision and better
+          outcomes.
         </p>
         <a
           class="url-link popup-link btn item-block slide-btn-yellow modal-open-btn"
@@ -502,17 +547,27 @@ function loadScript(url, callback) {
         >
           Download PDF to Learn More
         </a>
-      </div> <!-- end .card -->
-    </div> <!-- end .slide -->
+      </div>
+      <!-- end .card -->
+    </div>
+    <!-- end .slide -->
 
     <div class="slide">
       <div class="card">
         <div class="small-image">
-          <img src="https://v.fastcdn.co/u/23b46e4b/63526998-0-Complex-hand-deformi.png" alt="Complex Hand Deformity">
+          <img
+            src="https://v.fastcdn.co/u/23b46e4b/63526998-0-Complex-hand-deformi.png"
+            alt="Complex Hand Deformity"
+          />
         </div>
         <p class="slide-title">Complex Hand Deformity</p>
         <p class="small-text">
-          Our Hand Center is a multispecialty collaboration between our hand surgeons in orthopaedic surgery and plastic and reconstructive surgery. We specialize in diagnosing, treating and rehabilitating patients who have hand injuries or disorders. Our hand specialists constantly work to improve care, especially for difficult diagnostic or reconstructive cases.
+          Our Hand Center is a multispecialty collaboration between our hand
+          surgeons in orthopaedic surgery and plastic and reconstructive
+          surgery. We specialize in diagnosing, treating and rehabilitating
+          patients who have hand injuries or disorders. Our hand specialists
+          constantly work to improve care, especially for difficult diagnostic
+          or reconstructive cases.
         </p>
         <a
           class="url-link popup-link btn item-block slide-btn-yellow modal-open-btn"
@@ -530,14 +585,17 @@ function loadScript(url, callback) {
         >
           Download PDF to Learn More
         </a>
-      </div> <!-- end .card -->
-    </div> <!-- end .slide -->
-
-  </div> <!-- end.slider1 -->
+      </div>
+      <!-- end .card -->
+    </div>
+    <!-- end .slide -->
+  </div>
+  <!-- end.slider1 -->
 
   <div class="slider-controls">
     <a class="slider-arrow prev1"></a>
     <a class="slider-arrow next1"></a>
-  </div> <!-- end .slider-controls -->
-
-</div><!-- end .slider-container -->
+  </div>
+  <!-- end .slider-controls -->
+</div>
+<!-- end .slider-container -->
