@@ -21,24 +21,31 @@
   height: 400px;
   font-size: 0.9907rem;
   font-family: "trade-gothic-next", "trade-gothic-next-1", "trade-gothic-next-2", "trade-gothic-next-web", "trade-gothic-next-web-1", "trade-gothic-next-web-2";
-  -webkit-box-shadow: rgb(93 93 93 / 25%) 2px 0 4px 0;
-          box-shadow: rgb(93 93 93 / 25%) 2px 0 4px 0;
+  /* -webkit-box-shadow: rgb(93 93 93 / 25%) 2px 0 4px 0; */
+  /*         box-shadow: rgb(93 93 93 / 25%) 2px 0 4px 0; */
+  border: 1px solid rgb(93 93 93 / 25%);
   display: flex;
   flex-direction: column;
 }
 
+.card.layer-0 {
+  max-width: 301px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+}
+
 .card .layer-1 {
-      width: 265px;
-      height: 265px;
-      flex-basis: 265px;
+  width: 265px;
+  height: 265px;
+  flex-basis: 265px;
 }
 
 .card .layer-2 {
-      width: 100%;
-      flex: auto;
-      background-color: #FFF;
-      display: flex;
-      flex-direction: column;
+  width: 100%;
+  flex: auto;
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
 }
 
 .card .layer-2 .slide-title {
@@ -124,16 +131,38 @@
   background: url('https://v.fastcdn.co/u/23b46e4b/56445012-0-slider-right-blue.png') no-repeat;
   background-size: contain;
   position: absolute;
-  top: 35%;
-  right: -3.125rem;
+  cursor: pointer;
+  top: 100%;
+  right: 20%;
 }
 
 .slider-arrow.prev {
   background: url('https://v.fastcdn.co/u/23b46e4b/56445007-0-slider-left-blue.png') no-repeat;
   background-size: contain;
   position: absolute;
-  top: 35%;
-  left: -3.125rem;
+  cursor: pointer;
+  top: 100%;
+  left: 20%;
+}
+
+.lightbox-content {
+    background-color: #fefefe;
+    border-radius: 3px;
+    position: relative;
+    margin: auto 1rem;
+    animation: slide-down .5s ease-in-out;
+}
+
+@media only screen and (min-width: 600px) {
+  .slider-arrow.next {
+    top: 35%;
+    right: -3.125rem;
+  }
+
+  .slider-arrow.prev {
+    top: 35%;
+    left: -3.125rem;
+  }
 }
 
 /* custom modal style */
@@ -158,14 +187,6 @@
     display: flex;
     align-items: center;
     padding: 30px 0;
-}
-
-.lightbox-content {
-    background-color: #fefefe;
-    border-radius: 3px;
-    position: relative;
-    margin: auto;
-    animation: slide-down .5s ease-in-out;
 }
 
 .lightbox-content {
@@ -216,15 +237,23 @@
 }
 
 .modal-footer a:first-child {
-  margin-right: 0.5rem;
   background: #2774AE;
   color: #FFF;
 }
 
 .modal-footer a:nth-child(2) {
-  margin-left: 0.5rem;
   background: #FFC72C;
   color: #003B5C;
+}
+
+@media only screen and (min-width: 600px) {
+  .modal-footer a:first-child {
+    margin-right: 0.5rem;
+  }
+
+  .modal-footer a:nth-child(2) {
+    margin-left: 0.5rem;
+  }
 }
 
 .ucla-popup-img-container {
@@ -298,6 +327,7 @@
   }
 
   .lightbox-content {
+    margin: 0 auto;
     width: 47.375rem;
   }
 
@@ -387,10 +417,10 @@ function loadScript(url, callback) {
     loadScript("//code.jquery.com/jquery-3.5.0.min.js", function () {
 
       //jQuery loaded
-      console.log('jquery loaded');
+      console.log('jquery loaded 2');
       loadScript("//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js", function () {
         //slick loaded
-        afterJquery();
+        afterJquery2();
 
       });
 
@@ -398,12 +428,12 @@ function loadScript(url, callback) {
   } else {
     loadScript("//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js", function () {
       //slick loaded
-      afterJquery();
+      afterJquery2();
 
     });
   }
 
-  function afterJquery() {
+  function afterJquery2() {
     $('.slider-container').closest('.section').addClass('section-front');
     let modalOpenBtns;
     const modals = document.querySelectorAll('.ucla-popup');
@@ -447,7 +477,22 @@ function loadScript(url, callback) {
       variableWidth: true,
       arrows: true,
       prevArrow: $('.prev'),
-      nextArrow: $('.next')
+      nextArrow: $('.next'),
+      responsive: [
+        {
+          breakpoint: 600,
+          settings: {
+            dots: false,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            variableWidth: false,
+            arrows: true,
+            prevArrow: $('.prev'),
+            nextArrow: $('.next'),
+          }
+        }
+      ]
     });
   }
 })();
