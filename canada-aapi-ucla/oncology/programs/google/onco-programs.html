@@ -21,8 +21,20 @@
     font-family: "trade-gothic-next", "trade-gothic-next-1",
       "trade-gothic-next-2", "trade-gothic-next-web", "trade-gothic-next-web-1",
       "trade-gothic-next-web-2";
-    -webkit-box-shadow: rgb(93 93 93 / 25%) 2px 0 4px 0;
-    box-shadow: rgb(93 93 93 / 25%) 2px 0 4px 0;
+    /* -webkit-box-shadow: rgb(93 93 93 / 25%) 2px 0 4px 0; */
+    /* box-shadow: rgb(93 93 93 / 25%) 2px 0 4px 0; */
+    border: 1px solid rgb(93 93 93 / 25%);
+    margin: 0 auto;
+  }
+
+  .slider1.programs .card {
+    width: 301px;
+  }
+
+  @media only screen and (min-width: 600px) {
+    .slider1.programs .card {
+      width: 100%;
+    }
   }
 
   .slider1.programs .slide img {
@@ -118,8 +130,9 @@
       no-repeat;
     background-size: contain;
     position: absolute;
-    top: 35%;
-    right: -3.125rem;
+    cursor: pointer;
+    top: 100%;
+    right: 20%;
   }
 
   .slider-arrow.prev1 {
@@ -127,8 +140,21 @@
       no-repeat;
     background-size: contain;
     position: absolute;
-    top: 35%;
-    left: -3.125rem;
+    cursor: pointer;
+    top: 100%;
+    left: 20%;
+  }
+
+  @media only screen and (min-width: 600px) {
+    .slider-arrow.next1 {
+      top: 35%;
+      right: -3.125rem;
+    }
+
+    .slider-arrow.prev1 {
+      top: 35%;
+      left: -3.125rem;
+    }
   }
 
   /* custom modal style */
@@ -418,6 +444,21 @@
         arrows: true,
         prevArrow: $(".prev1"),
         nextArrow: $(".next1"),
+        responsive: [
+          {
+            breakpoint: 600,
+            settings: {
+              dots: false,
+              infinite: true,
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              variableWidth: false,
+              arrows: true,
+              prevArrow: $('.prev1'),
+              nextArrow: $('.next1'),
+            }
+          }
+        ]
       });
     }
   })();
