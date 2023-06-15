@@ -1,0 +1,113 @@
+/**
+* custom-style.css
+* https://github.com/hylinkdigital/ucla-mena-mx-can-aapi
+*/
+@media only screen and (min-width: 768px) {
+  /* top menu UCLA health logo */
+  #page-block-6inlgku0ccs .section-block #element-1 {
+    left: 0.1875rem;
+  }
+
+  /* top menu logo CTA button Make An Appointment  */
+  #page-block-6inlgku0ccs .section-block #element-5 {
+    left: 37.75rem;
+  }
+
+  /* top menu logo CTA button Call Us  */
+  #page-block-6inlgku0ccs .section-block #element-2 {
+    left: 51rem;
+  }
+
+  /* top banner h1 */
+  #page_block_header .section-block #element-882 {
+    left: -11rem;
+    top: 7rem;
+  }
+
+  /* top banner h1 > span */
+  #page_block_header .section-block #element-882 h1 span {
+    line-height: 3.5rem;
+    font-size: 2.2rem;
+  }
+
+  /* top banner CTA button Make An Appointment */
+  #page_block_header .section-block #element-883 {
+    left: 5rem;
+    top: 14.6rem;
+  }
+
+  /* sub specialty section (white bg container) */
+  #page-block-pnnkga6bjr {
+    height: 47rem;
+  }
+
+  /* sub specialty section text after slider */
+  #page-block-pnnkga6bjr .section-block #element-799 {
+    top: 44rem;
+  }
+
+  /* physicians section (white bg container) */
+  #page-block-05mmhgarnt4f {
+    height: 47rem;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  /* physicians section (white bg  container) */
+  #page-block-05mmhgarnt4f {
+    height: 44rem;
+  }
+
+  /* sub specialty section text after slider */
+  #page-block-pnnkga6bjr .section-block #element-799 {
+    top: 42rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+
+  /* physicians section (white bg  container) */
+  #page-block-05mmhgarnt4f {
+    height: 38rem;
+  }
+
+}
+
+@media only screen and (min-width: 1200px) {
+  /* top menu UCLA health logo */
+  #page-block-6inlgku0ccs .section-block #element-1 {
+    left: -4.1875rem;
+  }
+
+  /* top menu logo CTA button Make An Appointment  */
+  #page-block-6inlgku0ccs .section-block #element-5 {
+    left: 40.75rem;
+  }
+
+  /* top menu logo CTA button Call Us  */
+  #page-block-6inlgku0ccs .section-block #element-2 {
+    left: 54rem;
+  }
+
+  /* physicians section (white bg  container) */
+  #page-block-05mmhgarnt4f {
+    height: 35rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  /* top menu UCLA health logo */
+  #page-block-6inlgku0ccs .section-block #element-1 {
+    left: -13.1875rem; /* back to default left */
+  }
+
+  /* top menu logo CTA button Make An Appointment  */
+  #page-block-6inlgku0ccs .section-block #element-5 {
+    left: 49.75rem; /* back to default left */
+  }
+
+  /* top menu logo CTA button Call Us  */
+  #page-block-6inlgku0ccs .section-block #element-2 {
+    left: 62.9375rem; /* back to default left */
+  }
+}
