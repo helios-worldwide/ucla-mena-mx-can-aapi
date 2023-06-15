@@ -13,7 +13,6 @@
   }
 
   .slider1.programs .card {
-    height: 534px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -29,11 +28,42 @@
 
   .slider1.programs .card {
     width: 301px;
+    height: 485px;
   }
 
   @media only screen and (min-width: 600px) {
     .slider1.programs .card {
       width: 100%;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    .slider1.programs .card {
+      height: 360px;
+    }
+  }
+
+  @media only screen and (min-width: 800px) {
+    .slider1.programs .card {
+      height: 385px;
+    }
+  }
+
+  @media only screen and (min-width: 900px) {
+    .slider1.programs .card {
+      height: 395px;
+    }
+  }
+
+  @media only screen and (min-width: 1000px) {
+    .slider1.programs .card {
+      height: 450px;
+    }
+  }
+
+  @media only screen and (min-width: 1100px) {
+    .slider1.programs .card {
+      height: 485px; /* back to 485px again at 1100px */
     }
   }
 
@@ -65,9 +95,15 @@
     height: 150px;
   }
 
+  .slider1.programs .slide-btn-yellow,
+  .slider1.programs .slide-btn-blue {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   .slider1.programs .slide-btn-yellow {
-    display: block;
-    padding: 1rem 0;
     background: #ffc72c;
     color: #053d5b;
     font-size: 0.8669rem;
@@ -77,8 +113,6 @@
   }
 
   .slider1.programs .slide-btn-blue {
-    display: block;
-    padding: 1rem 0;
     background: #2775ad;
     color: #ffffff;
     font-size: 0.8669rem;
