@@ -109,16 +109,6 @@
 }
 
 @media only screen and (min-width: 1440px) {
-  /* top banner h1 */
-  #page_block_header .section-block #element-882 {
-    left: -15.6rem;
-  }
-
-  /* top banner CTA button Make An Appointment */
-  #page_block_header .section-block #element-884 {
-    left: 2rem;
-  }
-
   /* top menu UCLA health logo */
   #page-block-6inlgku0ccs .section-block #element-1 {
     left: -13.1875rem; /* back to default left */
@@ -132,6 +122,16 @@
   /* top menu logo CTA button Call Us  */
   #page-block-6inlgku0ccs .section-block #element-2 {
     left: 62.9375rem; /* back to default left */
+  }
+
+  /* top banner h1 */
+  #page_block_header .section-block #element-882 {
+    left: -15.6rem;
+  }
+
+  /* top banner CTA button Make An Appointment */
+  #page_block_header .section-block #element-884 {
+    left: 2rem;
   }
 }
 
@@ -148,7 +148,7 @@
   }
 }
 
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1800px) {
   /* top banner h1 */
   #page_block_header .section-block #element-882 {
     left: -19.6rem;

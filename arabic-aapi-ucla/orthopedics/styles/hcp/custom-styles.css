@@ -20,14 +20,14 @@
 
   /* top banner h1 */
   #page_block_header .section-block #element-882 {
-    left: -11rem;
+    left: -13rem;
     top: 7rem;
   }
 
   /* top banner h1 > span */
   #page_block_header .section-block #element-882 h1 span {
     line-height: 3.5rem;
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   /* top banner CTA button Make An Appointment */
@@ -95,6 +95,18 @@
   }
 }
 
+@media only screen and (min-width: 1300px) {
+  /* top banner h1 > span */
+  #page_block_header .section-block #element-882 h1 span {
+    font-size: 2.2rem;
+  }
+
+  /* top banner CTA button Make An Appointment */
+  #page_block_header .section-block #element-883 {
+    left: 4rem;
+  }
+}
+
 @media only screen and (min-width: 1440px) {
   /* top menu UCLA health logo */
   #page-block-6inlgku0ccs .section-block #element-1 {
@@ -109,5 +121,45 @@
   /* top menu logo CTA button Call Us  */
   #page-block-6inlgku0ccs .section-block #element-2 {
     left: 62.9375rem; /* back to default left */
+  }
+
+  /* top banner h1 */
+  #page_block_header .section-block #element-882 {
+    left: -16rem;
+  }
+
+  /* top banner CTA button Make An Appointment */
+  #page_block_header .section-block #element-883 {
+    left: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  /* top banner h1 */
+  #page_block_header .section-block #element-882 {
+    left: -17rem;
+  }
+
+  /* top banner h1 > span */
+  #page_block_header .section-block #element-882 h1 span {
+    font-size: 2.4rem;
+  }
+
+  /* top banner CTA button Make An Appointment */
+  #page_block_header .section-block #element-883 {
+    left: 0rem;
+  }
+
+}
+
+@media only screen and (min-width: 1800px) {
+  /* top banner h1 */
+  #page_block_header .section-block #element-882 {
+    left: -22rem;
+  }
+
+  /* top banner CTA button Make An Appointment */
+  #page_block_header .section-block #element-883 {
+    left: -4rem;
   }
 }
