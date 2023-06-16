@@ -34,6 +34,12 @@
   background-repeat: no-repeat;
 }
 
+@media only screen and (min-width: 420px) {
+  .card.layer-0 {
+    max-width: 301px;
+  }
+}
+
 .card .layer-1 {
   width: 265px;
   height: 265px;
@@ -132,8 +138,10 @@
   background-size: contain;
   position: absolute;
   cursor: pointer;
-  top: 100%;
-  right: 20%;
+  top: 50%;
+  right: -1%;
+  /* top: 100%; */
+  /* right: 20%; */
 }
 
 .slider-arrow.prev {
@@ -141,8 +149,10 @@
   background-size: contain;
   position: absolute;
   cursor: pointer;
-  top: 100%;
-  left: 20%;
+  top: 50%;
+  left: -1%;
+  /* top: 100%; */
+  /* left: 20%; */
 }
 
 .lightbox-content {

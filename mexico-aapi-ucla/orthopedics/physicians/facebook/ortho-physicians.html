@@ -29,9 +29,15 @@
 }
 
 .card.layer-0 {
-  max-width: 301px;
+  max-width: 291px;
   margin: 0 auto;
   background-repeat: no-repeat;
+}
+
+@media only screen and (min-width: 420px) {
+  .card.layer-0 {
+    max-width: 301px;
+  }
 }
 
 .card .layer-1 {
@@ -132,8 +138,10 @@
   background-size: contain;
   position: absolute;
   cursor: pointer;
-  top: 100%;
-  right: 20%;
+  top: 50%;
+  right:-1%;
+  /* top: 100%; */
+  /* right: 20%; */
 }
 
 .slider-arrow.prev {
@@ -141,8 +149,10 @@
   background-size: contain;
   position: absolute;
   cursor: pointer;
-  top: 100%;
-  left: 20%;
+  top: 50%;
+  left:-1%;
+  /* top: 100%; */
+  /* left: 20%; */
 }
 
 .lightbox-content {
@@ -151,6 +161,12 @@
     position: relative;
     margin: auto 1rem;
     animation: slide-down .5s ease-in-out;
+}
+
+@media only screen and (min-width: 400px) {
+  .lightbox-content {
+    margin: 0 auto;
+  }
 }
 
 @media only screen and (min-width: 600px) {
