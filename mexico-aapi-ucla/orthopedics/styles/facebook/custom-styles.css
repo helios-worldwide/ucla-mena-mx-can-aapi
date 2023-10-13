@@ -20,21 +20,21 @@
 
   /* top banner h1 */
   #page_block_header .section-block #element-882 {
-    left: -17.6rem;
-    top: 7rem;
+    left: -19.6rem;
+    top: 35%;
   }
 
   /* top banner h1 > span */
   #page_block_header .section-block #element-882 h1 span {
-    line-height: 3.5rem;
-    font-size: 2rem;
+    line-height: 2rem;
+    font-size: 1.65rem;
     text-align: center;
   }
 
   /* top banner CTA button Make An Appointment */
   #page_block_header .section-block #element-883 {
-    left: 6rem;
-    top: 14.6rem;
+    left: 4rem;
+    top: 50%;
   }
 
   /* sub specialty section (main container) */
@@ -104,17 +104,17 @@
 @media only screen and (min-width: 1300px) {
   /* top banner h1 */
   #page_block_header .section-block #element-882 {
-    left: -18.6rem;
+    left: -21.6rem;
   }
 
   /* top banner h1 > span */
   #page_block_header .section-block #element-882 h1 span {
-    font-size: 2.2rem;
+    font-size: 1.85rem;
   }
 
   /* top banner CTA button Make An Appointment */
   #page_block_header .section-block #element-883 {
-    left: 5rem;
+    left: 2rem;
   }
 }
 
@@ -133,28 +133,53 @@
   #page-block-6inlgku0ccs .section-block #element-2 {
     left: 62.9375rem; /* back to default left */
   }
+
+  /* top banner h1 */
+  #page_block_header .section-block #element-882 {
+    left: -23.6rem;
+  }
+
+  /* top banner h1 > span */
+  #page_block_header .section-block #element-882 h1 span {
+    font-size: 2rem;
+  }
+
+  /* top banner CTA button Make An Appointment */
+  #page_block_header .section-block #element-883 {
+    left: 0rem;
+  }
 }
 
 @media only screen and (min-width: 1600px) {
   /* top banner h1 */
   #page_block_header .section-block #element-882 {
-    left: -24.6rem;
+    left: -26.6rem;
+  }
+
+  /* top banner h1 > span */
+  #page_block_header .section-block #element-882 h1 span {
+    font-size: 2.3rem;
   }
 
   /* top banner CTA button Make An Appointment */
   #page_block_header .section-block #element-883 {
-    left: -1rem;
+    left: -3rem;
   }
 }
 
 @media only screen and (min-width: 1800px) {
   /* top banner h1 */
   #page_block_header .section-block #element-882 {
-    left: -26.6rem;
+    left: -29.6rem;
+  }
+
+  /* top banner h1 > span */
+  #page_block_header .section-block #element-882 h1 span {
+    font-size: 2.5rem;
   }
 
   /* top banner CTA button Make An Appointment */
   #page_block_header .section-block #element-883 {
-    left: -3rem;
+    left: -6rem;
   }
 }
