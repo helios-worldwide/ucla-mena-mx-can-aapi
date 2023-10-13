@@ -20,21 +20,21 @@
 
   /* top banner h1 */
   #page_block_header .section-block #element-883 {
-    left: -10rem;
-    top: 5.6rem;
+    left: -14rem;
+    top: 32%;
   }
 
   /* top banner h1 > span */
   #page_block_header .section-block #element-883 h1 span {
     line-height: 3.5rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-align: center;
   }
 
   /* top banner CTA button Make An Appointment */
   #page_block_header .section-block #element-884 {
-    left: 7.8rem;
-    top: 14rem;
+    left: 4rem;
+    top: 52%;
   }
 
   /* sub specialty section (white bg container) */
@@ -72,6 +72,11 @@
     height: 38rem;
   }
 
+  /* top banner h1 > span */
+  #page_block_header .section-block #element-883 h1 span {
+    font-size: 2.2rem;
+  }
+
 }
 
 @media only screen and (min-width: 1200px) {
@@ -99,12 +104,12 @@
 @media only screen and (min-width: 1300px) {
   /* top banner h1 */
   #page_block_header .section-block #element-883 {
-    left: -12rem;
+    left: -16rem;
   }
 
   /* top banner CTA button Make An Appointment */
   #page_block_header .section-block #element-884 {
-    left: 5.8rem;
+    left: 2rem;
   }
 }
 
@@ -126,35 +131,28 @@
 
   /* top banner h1 */
   #page_block_header .section-block #element-883 {
-    left: -14rem;
+    left: -18rem;
+  }
+
+  /* top banner h1 > span */
+  #page_block_header .section-block #element-883 h1 span {
+    font-size: 2.5rem;
   }
 
   /* top banner CTA button Make An Appointment */
   #page_block_header .section-block #element-884 {
-    left: 3.8rem;
+    left: 0rem;
   }
 }
 
 @media only screen and (min-width: 1600px) {
   /* top banner h1 */
   #page_block_header .section-block #element-883 {
-    left: -16rem;
+    left: -22rem;
   }
 
   /* top banner CTA button Make An Appointment */
   #page_block_header .section-block #element-884 {
-    left: 1.8rem;
-  }
-}
-
-@media only screen and (min-width: 1800px) {
-  /* top banner h1 */
-  #page_block_header .section-block #element-883 {
-    left: -18rem;
-  }
-
-  /* top banner CTA button Make An Appointment */
-  #page_block_header .section-block #element-884 {
-    left: -0.2rem;
+    left: -4rem;
   }
 }

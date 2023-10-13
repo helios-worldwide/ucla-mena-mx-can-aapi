@@ -20,21 +20,21 @@
 
   /* top banner h1 */
   #page_block_header .section-block #element-882 {
-    left: -11.6rem;
-    top: 7rem;
+    left: -13.6rem;
+    top: 32%;
   }
 
   /* top banner h1 > span */
   #page_block_header .section-block #element-882 h1 span {
     line-height: 3.5rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-align: center;
   }
 
   /* top banner CTA button Make An Appointment */
   #page_block_header .section-block #element-883 {
-    left: 6rem;
-    top: 14.6rem;
+    left: 4rem;
+    top: 50%;
   }
 
   /* sub specialty section (white bg container) */
@@ -72,6 +72,11 @@
     height: 38rem;
   }
 
+  /* top banner h1 > span */
+  #page_block_header .section-block #element-882 h1 span {
+    font-size: 2.2rem;
+  }
+
 }
 
 @media only screen and (min-width: 1200px) {
@@ -99,12 +104,12 @@
 @media only screen and (min-width: 1300px) {
   /* top banner h1 */
   #page_block_header .section-block #element-882 {
-    left: -13.6rem;
+    left: -15.2rem;
   }
 
   /* top banner CTA button Make An Appointment */
   #page_block_header .section-block #element-883 {
-    left: 4rem;
+    left: 2.6rem;
   }
 }
 
@@ -126,19 +131,12 @@
 
   /* top banner h1 */
   #page_block_header .section-block #element-882 {
-    left: -15.6rem;
-  }
-
-  /* top banner CTA button Make An Appointment */
-  #page_block_header .section-block #element-883 {
-    left: 2rem;
-  }
-}
-
-@media only screen and (min-width: 1600px) {
-  /* top banner h1 */
-  #page_block_header .section-block #element-882 {
     left: -17.6rem;
+  }
+
+  /* top banner h1 > span */
+  #page_block_header .section-block #element-882 h1 span {
+    font-size: 2.2rem;
   }
 
   /* top banner CTA button Make An Appointment */
@@ -147,7 +145,7 @@
   }
 }
 
-@media only screen and (min-width: 1800px) {
+@media only screen and (min-width: 1600px) {
   /* top banner h1 */
   #page_block_header .section-block #element-882 {
     left: -19.6rem;
