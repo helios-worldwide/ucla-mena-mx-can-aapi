@@ -20,20 +20,20 @@
 
   /* top banner h1 */
   #page_block_header .section-block #element-882 {
-    left: -13rem;
-    top: 7rem;
+    left: -19rem;
+    top: 33%;
   }
 
   /* top banner h1 > span */
   #page_block_header .section-block #element-882 h1 span {
-    line-height: 3.5rem;
-    font-size: 2rem;
+    line-height: 3rem;
+    font-size: 1.65rem;
   }
 
   /* top banner CTA button Make An Appointment */
   #page_block_header .section-block #element-883 {
     left: 5rem;
-    top: 14.6rem;
+    top: 53%;
   }
 
   /* sub specialty section (white bg container) */
@@ -98,12 +98,12 @@
 @media only screen and (min-width: 1300px) {
   /* top banner h1 > span */
   #page_block_header .section-block #element-882 h1 span {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
   }
 
   /* top banner CTA button Make An Appointment */
   #page_block_header .section-block #element-883 {
-    left: 4rem;
+    left: 2rem;
   }
 }
 
@@ -125,20 +125,43 @@
 
   /* top banner h1 */
   #page_block_header .section-block #element-882 {
-    left: -16rem;
-    top: 7rem;
+    left: -20.5rem;
+  }
+
+  /* top banner h1 > span */
+  #page_block_header .section-block #element-882 h1 span {
+    font-size: 1.9rem;
   }
 
   /* top banner CTA button Make An Appointment */
   #page_block_header .section-block #element-883 {
-    left: 2rem;
+    left: -1rem;
   }
 }
 
 @media only screen and (min-width: 1600px) {
   /* top banner h1 */
   #page_block_header .section-block #element-882 {
-    left: -17rem;
+    left: -21rem;
+  }
+
+  /* top banner h1 > span */
+  #page_block_header .section-block #element-882 h1 span {
+    font-size: 2.1rem;
+  }
+
+  /* top banner CTA button Make An Appointment */
+  #page_block_header .section-block #element-883 {
+    left: -3rem;
+  }
+
+}
+
+@media only screen and (min-width: 1800px) {
+
+  /* top banner h1 */
+  #page_block_header .section-block #element-882 {
+    left: -22rem;
   }
 
   /* top banner h1 > span */
@@ -148,20 +171,18 @@
 
   /* top banner CTA button Make An Appointment */
   #page_block_header .section-block #element-883 {
-    left: 0rem;
+    left: -6rem;
   }
-
 }
 
-@media only screen and (min-width: 1800px) {
+@media only screen and (min-width: 1900px) {
   /* top banner h1 */
   #page_block_header .section-block #element-882 {
-    left: -22rem;
+    left: -25rem;
   }
 
   /* top banner CTA button Make An Appointment */
   #page_block_header .section-block #element-883 {
-    left: -4rem;
+    left: -9rem;
   }
-
 }
