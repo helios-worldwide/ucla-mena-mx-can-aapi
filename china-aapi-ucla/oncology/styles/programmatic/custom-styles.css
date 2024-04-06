@@ -1,0 +1,50 @@
+#page-block-ao6dmrr1asj {
+    height: 8.25rem;
+    max-width: 100%;
+    margin-top: -100px;
+    z-index: 99;
+}
+
+#element-8 {
+    z-index: 666;
+}
+
+#element-16, #element-198, #element-210, #element-618, #element-207 {
+overflow:hidden;
+border-radius:5px;
+box-shadow: 0 0 1em  rgba(0,0,0,0.3);
+}
+
+@media only screen and (min-width: 1900px) {
+  #page_block_header {
+		height: 53.375rem !important;
+	}
+
+  #page_block_header .section-block {
+      height: 57rem !important;
+  }
+
+  /* h1 text container inside the top banner */
+  #element-792 {
+    top: 19.375rem !important;
+    width: 32rem !important;
+  }
+
+  /* the span inside the span inside of h1 */
+  #element-792 .x_f2074b6c {
+    font-size: 60px !important;
+  }
+
+  /* button (link) container */
+  #element-8 {
+    top: 28.8125rem !important;
+    width: 13.75rem !important;
+	}
+
+  /* button (link) */
+  #element-8 .btn {
+    width: 13.75rem !important;
+    font-size: 1.15rem !important;
+  }
+
+}
