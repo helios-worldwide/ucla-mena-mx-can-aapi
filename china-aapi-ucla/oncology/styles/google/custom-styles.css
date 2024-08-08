@@ -17,16 +17,16 @@ box-shadow: 0 0 1em  rgba(0,0,0,0.3);
 
 @media only screen and (min-width: 1900px) {
   #page_block_header {
-		height: 53.375rem !important;
-	}
+    height: 53.375rem !important;
+  }
 
   #page_block_header .section-block {
-      height: 57rem !important;
+    height: 57rem !important;
   }
 
   /* h1 text container inside the top banner */
   #element-792 {
-    top: 19.375rem !important;
+    top: 13.375rem !important;
     width: 32rem !important;
   }
 
@@ -36,14 +36,34 @@ box-shadow: 0 0 1em  rgba(0,0,0,0.3);
     font-size: 60px !important;
   }
 
+  #element-803 {
+    top: 21rem !important;
+  }
+
+  #element-804 {
+    top: 25rem !important;
+  }
+
   /* button (link) container */
   #element-8 {
-    top: 28.8125rem !important;
+    top: 29.8125rem !important;
     width: 13.75rem !important;
-	}
+  }
 
   /* button (link) */
   #element-8 .btn {
+    width: 13.75rem !important;
+    font-size: 1.15rem !important;
+  }
+
+  #element-805 {
+    top: 29.8125rem !important;
+    left: 14.5625rem !important;
+    width: 13.75rem !important;
+  }
+
+  /* button (link) */
+  #element-805 .btn {
     width: 13.75rem !important;
     font-size: 1.15rem !important;
   }

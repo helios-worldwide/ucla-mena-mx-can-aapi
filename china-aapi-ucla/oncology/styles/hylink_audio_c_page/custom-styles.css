@@ -26,19 +26,26 @@ box-shadow: 0 0 1em  rgba(0,0,0,0.3);
 
   /* h1 text container inside the top banner */
   #element-792 {
-    top: 19.375rem !important;
+    top: 13.375rem !important;
     width: 32rem !important;
   }
-
 
   /* the span inside the span inside of h1 */
   #element-792 .x_f2074b6c {
     font-size: 60px !important;
   }
 
+  #element-804 {
+    top: 21rem !important;
+  }
+
+  #element-805 {
+    top: 25rem !important;
+  }
+
   /* button (link) container */
   #element-8 {
-    top: 28.8125rem !important;
+    top: 29.8125rem !important;
     width: 13.75rem !important;
 	}
 
@@ -50,7 +57,7 @@ box-shadow: 0 0 1em  rgba(0,0,0,0.3);
 
   /* button (link) container */
   #element-803 {
-    top: 28.8125rem !important;
+    top: 29.8125rem !important;
     left: 14.5625rem !important;
     width: 13.75rem !important;
 	}
